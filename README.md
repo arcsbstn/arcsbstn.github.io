@@ -1,2 +1,3 @@
-# arcsbstn-landing-page
-Source code for the ARCSBSTN landing page.
+# ARCSBSTN Landing Page
+
+This project used HTML, CSS, and JavaScript to build a personal landing page for Adrianne Sebastian.
