@@ -158,11 +158,12 @@ li {
   border: 0;
   padding: 13px 40px;
   font-size: 80%;
-  color: #fff;
+  color: #f3f0e8;
 }
 
 .button:hover {
   background-color: #3b3a1e;
+  color: #f3f0e8;
   transition: all 0.3s ease;
 }
 
