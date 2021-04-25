@@ -206,13 +206,15 @@ li {
   color: #f3f0e8;
 }
 
+/* media res queries */
+
 @media screen and (max-width: 745px) {
   h1 {
     font-size: 320%;
   }
 
   h2 {
-    font-size: 130%;
+    font-size: 115%;
   }
 
   #icon,
