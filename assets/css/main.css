@@ -151,6 +151,11 @@ li {
 
 #exit {
   margin: 40px 0;
+  list-style: none;
+}
+
+#exit li {
+  display: inline-block;
 }
 
 .button {
@@ -212,5 +217,10 @@ li {
   #icon,
   #icon img {
     max-width: 45px;
+  }
+
+  #exit li {
+    display: block;
+    margin-bottom: 25px;
   }
 }
