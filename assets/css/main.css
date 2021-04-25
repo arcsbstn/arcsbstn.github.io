@@ -59,6 +59,7 @@ header {
 }
 
 #toggle-view {
+  display: none;
   color: #006e5e;
 }
 
