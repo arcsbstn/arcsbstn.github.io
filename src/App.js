@@ -13,7 +13,7 @@ function App() {
       <Contact />
       <Footer />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
