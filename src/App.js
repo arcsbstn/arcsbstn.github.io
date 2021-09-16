@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './components/Navbar.js'
 import Hero from './components/Hero.js'
 import Projects from './components/Projects.js'
@@ -7,7 +6,7 @@ import Footer from './components/Footer.js'
 
 function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
+    <main>
       <Navbar />
       <Hero />
       <Projects />
