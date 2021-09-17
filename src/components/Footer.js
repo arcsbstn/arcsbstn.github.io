@@ -12,7 +12,8 @@ export default function Footer() {
   return (
     <section id='footer'
       style={footerStyle}>
-      Made with <i className='fa fa-heart' aria-hidden='true'></i> | Adrianne Sebastian 2021
+      <p>Adrianne Sebastian 2021</p>
+      <p>Made with <i className='fa fa-heart' aria-hidden='true'></i></p>
       <ul className='Footer__links'>
         <li><i className='fa fa-github' aria-hidden='true'></i></li>
         <li><i className='fa fa-codepen' aria-hidden='true'></i></li>
