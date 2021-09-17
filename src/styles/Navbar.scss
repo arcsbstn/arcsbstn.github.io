@@ -4,7 +4,13 @@
   align-items: center;
 }
 
-.Navbar__links li {
-  display: inline;
-  padding-right: 10px;
+.Navbar__links {
+  li {
+    display: inline;
+    padding-right: 10px;
+  }
+
+  button {
+    width: 40px;
+  }
 }
