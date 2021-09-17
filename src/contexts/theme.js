@@ -13,8 +13,8 @@ const themes = {
     projectsText: '#3A4E52',
     contactBg: '#292E33',
     contactAccent: '#B16449',
-    contactTextAreaBg: '#3A4E52',
-    contactTextAreaText: '#D7C1A1'
+    contactTextareaBg: '#3A4E52',
+    contactTextareaText: '#D7C1A1'
   },
   light: {
     stripBg: '#9A634F',
@@ -26,10 +26,10 @@ const themes = {
     projectsBg2: '#FADCD1',
     projectsAccent: '#DFB681',
     projectsText: '#926553',
-    contactBg: '#B16449',
-    contactAccent: '#CF886F',
-    contactTextAreaBg: '#F9DCD2',
-    contactTextAreaText: '#CF886F'
+    contactBg: '#C9C5B7',
+    contactAccent: '#CF886E',
+    contactTextareaBg: '#F9DCD2',
+    contactTextareaText: '#CF886F'
   }
 }
 
