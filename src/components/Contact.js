@@ -18,14 +18,17 @@ export default function Contact() {
       style={contactStyle}>
       <h3 style={{ color: theme.contactAccent }}>Contact</h3>
       <form id='contact'
-        name='contact'>
+        name='contact'
+        method='POST'
+        data-netlify='true'>
         <div className='row'>
           <label htmlFor='name'>Name</label>
           <input id='name'
             name='name'
             type='text'
             style={textareaStyle}
-            placeholder='Your Name' /></div>
+            placeholder='Your Name' />
+        </div>
         <div className='row'>
           <label htmlFor='email'>Email</label>
           <input id='email'
@@ -39,6 +42,9 @@ export default function Contact() {
           <textarea id='message'
             name='message'
             style={textareaStyle} />
+        </div>
+        <div className="row">
+          <div data-netlify-recaptcha='true'></div>
         </div>
         <div className='row'>
           <button type='submit'>Submit</button>
