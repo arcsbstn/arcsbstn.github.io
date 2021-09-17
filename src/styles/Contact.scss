@@ -1,0 +1,15 @@
+input[type=text],
+input[type=email],
+textarea {
+  border: none;
+}
+
+button {
+  border: none;
+
+  :active,
+  :hover,
+  :focus {
+    border: none;
+  }
+}
