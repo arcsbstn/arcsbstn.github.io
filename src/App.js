@@ -1,4 +1,4 @@
-import './styles/App.scss'
+import './styles/General.scss'
 import Navbar from './components/Navbar.js'
 import Hero from './components/Hero.js'
 import Projects from './components/Projects.js'
