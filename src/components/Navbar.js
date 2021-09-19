@@ -20,7 +20,7 @@ export default function Navbar() {
   }
 
   return (
-    <section id='navbar'
+    <nav id='navbar'
       className='Navbar__container'
       style={stripStyle}>
       <div className='General__wrapper'>
@@ -36,6 +36,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-    </section>
+    </nav>
   )
 }
