@@ -2,7 +2,7 @@ import '../styles/General.scss'
 import '../styles/Hero.scss'
 import React, { useContext } from 'react'
 import { ThemeContext } from '../contexts/theme'
-
+import Resume from './Resume'
 
 export default function Hero() {
   const [{ theme }] = useContext(ThemeContext)
@@ -18,6 +18,14 @@ export default function Hero() {
         <div className="Hero__wrapper">
           <h1 style={{ color: theme.heroAccent }}> Hi, I'm Adrianne!</h1>
           <h2>Currently seeking opportunities to help build beautiful, useful, and useable experiences.</h2>
+          <ul className='Hero__links' style={{ color: theme.heroAccent }}>
+            <li>
+              <Resume />
+            </li>
+            <li>
+              <a style={{color: theme.heroAccent}} href='#projects'><i class="fa fa-tasks" /> Projects</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
