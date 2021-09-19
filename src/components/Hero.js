@@ -15,8 +15,10 @@ export default function Hero() {
     <section id='hero'
       style={heroStyle}>
       <div className='General__wrapper'>
-        <h1 style={{ color: theme.heroAccent }}> Hi, I'm Adrianne!</h1>
-        <h2>Currently seeking opportunities to help build beautiful, useful, and useable experiences.</h2>
+        <div className="Hero__wrapper">
+          <h1 style={{ color: theme.heroAccent }}> Hi, I'm Adrianne!</h1>
+          <h2>Currently seeking opportunities to help build beautiful, useful, and useable experiences.</h2>
+        </div>
       </div>
     </section>
   )
