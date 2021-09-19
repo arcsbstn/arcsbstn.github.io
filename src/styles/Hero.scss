@@ -1,6 +1,35 @@
 #hero {
+  min-height: 80vh;
+}
+
+.Hero__wrapper {
   position: relative;
-  top: 30px;
-  padding: 250px 0 250px 0 ;
-  height: 60vh;
+  top: 20vh;
+
+  h1{
+    font-size: 5em;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 3em;
+  }
+
+  .Hero__links {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      border: 1px solid;
+      border-radius: 15px;
+      padding: 15px 20px 10px 20px;
+    }
+  }
 }
