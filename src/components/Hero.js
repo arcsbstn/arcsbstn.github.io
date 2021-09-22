@@ -15,7 +15,7 @@ export default function Hero() {
     <section id='hero'
       style={heroStyle}>
       <div className='General__wrapper'>
-        <div className="Hero__wrapper">
+        <div className='Hero__wrapper'>
           <h1 style={{ color: theme.heroAccent }}> Hi, I'm Adrianne!</h1>
           <h2>Currently seeking opportunities to help build beautiful, useful, and useable experiences.</h2>
           <ul className='Hero__links' style={{ color: theme.heroAccent }}>
@@ -23,7 +23,7 @@ export default function Hero() {
               <Resume />
             </li>
             <li>
-              <a style={{color: theme.heroAccent}} href='#projects'><i class="fa fa-tasks" /> Projects</a>
+              <a style={{ color: theme.heroAccent }} href='#projects'><i className='fa fa-tasks' /> Projects</a>
             </li>
           </ul>
         </div>
