@@ -5,34 +5,39 @@
   padding: 30px 0 10px 0;
 }
 
-.Navbar__wrapper {
+.Navbar__contentWrapper {
+  font-size: 1.2em;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
 
-  .Navbar__logo {
-    flex: 2;
+.Navbar__logo {
+  flex: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar__links {
+  flex: 1;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
   }
-  
-  .Navbar__links {
-    flex: 1;
-    padding: 0;
-    margin: 0;
-    display: flex;
 
-    a {
-      text-decoration: none;
-    }
-  
-    li {
-      flex: 1;
-      list-style-type: none;
-    }
-  
-    button {
-      width: 26px;
-      background-color: transparent;
-      position: relative;
-      top: -5px;
-    }
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  button {
+    background-color: transparent;
   }
 }
