@@ -5,21 +5,17 @@
 .Projects__accentBg {
   position: relative;
   height: 300px;
-
-  h3 {
-    font-size: 1.5em;
-    position: absolute;
-    top: 60%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
 }
   
 .Projects__contentWrapper {
   position: relative;
-  top: -80px;
+  top: -150px;
   z-index: 3;
+
+  h3 {
+    font-size: 1.8em;
+    margin: 0 auto;
+  }
 
   .Projects__tile {
     height: 180px;

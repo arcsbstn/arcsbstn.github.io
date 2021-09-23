@@ -11,11 +11,12 @@ export default function Projects() {
       style={{ color: theme.projectsAccent }}>
       <div className='Projects__wrapper'>
         <div className='Projects__primaryBg' style={{ backgroundColor: theme.projectsBg2 }}>
-          <div className='Projects__accentBg row justify-content-center' style={{ backgroundColor: theme.projectsBg1 }}>
-            <h3>Projects</h3>
+          <div className='Projects__accentBg' style={{ backgroundColor: theme.projectsBg1 }}>
           </div>
           <div className='General__wrapper'>
             <div className='Projects__contentWrapper container d-flex flex-wrap flex-row'>
+          <h3>Projects</h3>
+
               <div className='row w-100 justify-content-center'>
                 {projects.map((project, index) => {
                   return (
