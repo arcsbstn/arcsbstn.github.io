@@ -1,10 +1,14 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
+import Resume from '../Resume'
 
 export default function NavLinks() {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext)
 
   let toggleIcon = isDark ? 'fa fa-sun-o' : 'fa fa-moon-o'
+  const ulStyle = {
+    backgroundColor: theme.stripBg
+  }
   const toggleIconStyle = {
     color: theme.stripText,
     border: `1px solid ${theme.stripText}`,
@@ -16,7 +20,11 @@ export default function NavLinks() {
   }
 
   return (
-    <ul>
+    <ul style={ulStyle}>
+      <li><a style={{ color: theme.stripText }} href='#projects'>
+        <Resume isNav='true'/>
+      </a>
+      </li>
       <li><a style={{ color: theme.stripText }} href='#projects'>Projects</a></li>
       <li><a style={{ color: theme.stripText }} href='#contact'>Contact</a></li>
       <li>
