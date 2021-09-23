@@ -7,10 +7,22 @@ textarea {
 
 button {
   border: none;
+  padding: 10px;
 
   :active,
   :hover,
   :focus {
     border: none;
+  }
+}
+
+.Contact__contentWrapper {
+  position: relative;
+  padding: 150px 0;
+  margin: 0 auto;
+  max-width: 80%;
+
+  h3 {
+    text-align: center
   }
 }
