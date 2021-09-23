@@ -17,7 +17,7 @@ export default function Navbar() {
       className='Navbar__container'
       style={stripStyle}>
       <div className='General__wrapper'>
-        <div className='Navbar__wrapper'>
+        <div className='Navbar__contentWrapper'>
           <div className='Navbar__logo'>Adrianne Sebastian</div>
           <div className='Navbar__links'>
             <MobNav />
