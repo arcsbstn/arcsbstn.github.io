@@ -9,9 +9,10 @@ export default function NavLinks() {
     color: theme.stripText,
     border: `1px solid ${theme.stripText}`,
     borderRadius: '100%',
-    paddingTop: '5px',
-    width: '30px',
-    height: '30px'
+    paddingTop: '6px',
+    paddingRight: '1px',
+    width: '33px',
+    height: '33px'
   }
 
   return (
