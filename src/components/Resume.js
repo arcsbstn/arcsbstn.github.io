@@ -12,7 +12,7 @@ export default function Resume(props) {
 
   return (
     <span className='resume'>
-      <a href={Document} target='_blank' rel='noreferrer' style={resumeStyle}><span><i className='fa fa-user' /></span> Resume</a>
+      <a href={Document} target='_blank' rel='noreferrer' style={resumeStyle}>Resume</a>
     </span>
   )
 }
