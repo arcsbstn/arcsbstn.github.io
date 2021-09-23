@@ -1,7 +1,7 @@
-import '../styles/General.scss'
-import '../styles/Navbar.scss'
+import '../../styles/General.scss'
+import '../../styles/Navbar.scss'
 import React, { useContext } from 'react'
-import { ThemeContext } from '../contexts/theme'
+import { ThemeContext } from '../../contexts/theme'
 
 export default function Navbar() {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext)

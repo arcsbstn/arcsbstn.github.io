@@ -1,5 +1,5 @@
 import './styles/General.scss'
-import Navbar from './components/Navbar.js'
+import Navbar from './components/nav/Navbar.js'
 import Hero from './components/Hero.js'
 import Projects from './components/Projects.js'
 import Contact from './components/Contact.js'
