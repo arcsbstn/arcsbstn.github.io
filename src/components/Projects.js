@@ -21,9 +21,14 @@ export default function Projects() {
                   return (
                     <div key={index}
                       className='Projects__tile col-md-5'
-                      style={{
-                        backgroundImage: `url(${project.image})`
-                      }}>
+                      style={{ backgroundImage: `url(${project.image})` }}>
+                      <div className="Projects__info Projects__info--blur">
+                        <h4>{project.title}</h4>
+                        <h5>{project.subtitle}</h5>
+                        <p>{project.description}</p>
+                        <a href={project.demoLink}>Demo</a>
+                        <a href={project.repoLink}>Source Code</a>
+                      </div>
                     </div>
                   )
                 })}
