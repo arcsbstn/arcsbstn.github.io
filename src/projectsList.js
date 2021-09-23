@@ -8,7 +8,7 @@ import IMG_TECHNICAL_DOCUMENTATION_PAGE from './assets/technical-documentation-p
 export const projects = [
   {
     title: '25+5 Clock',
-    subtitle: 'React',
+    techStack: ['React'],
     description: 'Pomodoro timer with an alarm and the option to adjust break and work session lengths.',
     image: IMG_25_5_CLOCK,
     demoLink: 'https://mystifying-booth-451e8d.netlify.app/',
@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     title: 'Product Landing Page',
-    subtitle: 'HTML5, CSS3',
+    techStack: ['HTML5', 'CSS3'],
     description: 'Responsive product landing page for a fictitious cafe.',
     image: IMG_PRODUCT_LANDING_PAGE,
     demoLink: 'https://codepen.io/arcsbstn/full/LYyzOdM',
@@ -24,7 +24,7 @@ export const projects = [
   },
   {
     title: 'Markdown Previewer',
-    subtitle: 'React, Marked, Bootstrap',
+    techStack: ['React', 'Marked', 'Bootstrap'],
     description: 'Responsive webapp for previewing Markdown syntax as rendered HTML.',
     image: IMG_MARKDOWN_PREVIEWER,
     demoLink: 'https://epic-ramanujan-65ff54.netlify.app/',
@@ -32,7 +32,7 @@ export const projects = [
   },
   {
     title: 'Drum Machine',
-    subtitle: 'React, Bootstrap',
+    techStack: ['React', 'Bootstrap'],
     description: 'Drum machine pads for generating sick beats.',
     image: IMG_DRUM_MACHINE,
     demoLink: 'https://hungry-kowalevski-20f07c.netlify.app/',
@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     title: 'CSS Flexboxes Technical Documentation Page',
-    subtitle: 'HTML5, CSS3',
+    techStack: ['HTML5', 'CSS3'],
     description: 'Personal cheatsheet for CSS Flexboxes.',
     image: IMG_TECHNICAL_DOCUMENTATION_PAGE,
     demoLink: 'https://codepen.io/arcsbstn/full/ZEKRBjr',
@@ -48,7 +48,7 @@ export const projects = [
   },
   {
     title: 'JavaScript Calculator',
-    subtitle: 'React',
+    techStack: ['React'],
     description: 'Basic calculator that uses formula logic (as opposed to immediate execution logic).',
     image: IMG_JAVASCRIPT_CALCULATOR,
     demoLink: 'https://flamboyant-hamilton-0a68fc.netlify.app/',
