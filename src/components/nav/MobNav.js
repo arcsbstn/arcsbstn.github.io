@@ -3,7 +3,7 @@ import NavLinks from './NavLinks'
 
 export default function MobNav() {
   return (
-    <nav className='Nav__mobNav'>
+    <nav className='Navbar__mobNav'>
       <NavLinks />
     </nav>
   )
