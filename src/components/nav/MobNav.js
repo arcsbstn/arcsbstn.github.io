@@ -4,9 +4,10 @@ import { useState } from 'react'
 
 export default function MobNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toggleIcon = isMenuOpen ? 'fa-times' : 'fa-bars'
   return (
     <nav className='Navbar__mobNav'>
-      <i className='fa fa-bars hamburger' onClick={() => setIsMenuOpen(!isMenuOpen)}></i>
+      <i className={`fa ${toggleIcon} hamburger`} onClick={() => setIsMenuOpen(!isMenuOpen)}></i>
       <div className='Navbar__mobNavLinks'>
         {isMenuOpen && <NavLinks />}
       </div>
