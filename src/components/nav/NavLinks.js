@@ -19,9 +19,11 @@ export default function NavLinks() {
     <ul>
       <li><a style={{ color: theme.stripText }} href='#projects'>Projects</a></li>
       <li><a style={{ color: theme.stripText }} href='#contact'>Contact</a></li>
-      <button onClick={toggleTheme}>
-        <i className={toggleIcon} aria-hidden='true' style={toggleIconStyle} />
-      </button>
+      <li>
+        <button onClick={toggleTheme}>
+          <i className={toggleIcon} aria-hidden='true' style={toggleIconStyle} />
+        </button>
+      </li>
     </ul>
   )
 }
