@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 import Resume from '../Resume'
 
-export default function NavLinks() {
+export default function NavLinks(props) {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext)
 
   let toggleIcon = isDark ? 'fa fa-sun-o' : 'fa fa-moon-o'
@@ -21,14 +21,17 @@ export default function NavLinks() {
 
   return (
     <ul style={ulStyle}>
-      <li><a style={{ color: theme.stripText }} href='#projects'>
-        <Resume isNav='true'/>
+      <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#projects'>
+        <Resume isNav='true' />
       </a>
       </li>
-      <li><a style={{ color: theme.stripText }} href='#projects'>Projects</a></li>
-      <li><a style={{ color: theme.stripText }} href='#contact'>Contact</a></li>
+      <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#projects'>Projects</a></li>
+      <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#contact'>Contact</a></li>
       <li>
-        <button onClick={toggleTheme}>
+        <button onClick={() => {
+          toggleTheme()
+          props.closeMobNav()
+        }}>
           <i className={toggleIcon} aria-hidden='true' style={toggleIconStyle} />
         </button>
       </li>
