@@ -21,17 +21,11 @@ export default function NavLinks(props) {
 
   return (
     <ul style={ulStyle}>
-      <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#projects'>
-        <Resume isNav='true' />
-      </a>
-      </li>
+      <li><Resume isNav='true' /></li>
       <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#projects'>Projects</a></li>
       <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#contact'>Contact</a></li>
       <li>
-        <button onClick={() => {
-          toggleTheme()
-          props.closeMobNav()
-        }}>
+        <button onClick={toggleTheme}>
           <i className={toggleIcon} aria-hidden='true' style={toggleIconStyle} />
         </button>
       </li>
