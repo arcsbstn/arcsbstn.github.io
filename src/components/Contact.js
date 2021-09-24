@@ -55,7 +55,7 @@ export default function Contact() {
               <input id='name'
                 name='name'
                 type='text'
-                onChange={(e) => { setName(e.target.value) }}
+                // onChange={(e) => { setName(e.target.value) }}
                 style={textareaStyle}
                 placeholder='Your Name' />
             </div>
@@ -64,7 +64,7 @@ export default function Contact() {
               <input id='email'
                 name='email'
                 type='email'
-                onChange={(e) => { setEmail(e.target.value) }}
+                // onChange={(e) => { setEmail(e.target.value) }}
                 style={textareaStyle}
                 placeholder='your@email.com' />
             </div>
@@ -72,7 +72,7 @@ export default function Contact() {
               <label htmlFor='message'>Message</label>
               <textarea id='message'
                 name='message'
-                onChange={(e) => { setMessage(e.target.value) }}
+                // onChange={(e) => { setMessage(e.target.value) }}
                 style={textareaStyle} />
             </div>
             <div className='row'>
