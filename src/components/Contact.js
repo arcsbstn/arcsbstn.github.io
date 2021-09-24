@@ -1,6 +1,6 @@
 import '../styles/General.scss'
 import '../styles/Contact.scss'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { ThemeContext } from '../contexts/theme'
 
 export default function Contact() {
@@ -18,9 +18,9 @@ export default function Contact() {
     color: theme.text
   }
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  // const [name, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [message, setMessage] = useState('')
 
   // function encode(data) {
   //   return Object.keys(data)
