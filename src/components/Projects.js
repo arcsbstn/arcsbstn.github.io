@@ -5,6 +5,9 @@ import { projects } from '../projectsList'
 
 export default function Projects() {
   const [{ theme }] = useContext(ThemeContext)
+  const accentElementStyle = {
+    color: theme.accentMain
+  }
 
   return (
     <section id='projects'
@@ -13,21 +16,25 @@ export default function Projects() {
         <div className='Projects__primaryBg' style={{ backgroundColor: theme.bgMain }}>
           <div className='General__wrapper'>
             <div className='Projects__contentWrapper container d-flex flex-wrap flex-row'>
-              <h3>Projects</h3>
+              <h3 style={accentElementStyle}>Projects</h3>
               {projects.map((project, index) => {
                 return (
                   <div className="row w-100 justify-content-center">
                     <div key={index}
                       className='Projects__tile col-md-6'
-                      style={{ backgroundImage: `url(${project.image})` }}>
+                      style={{ background: `linear-gradient(to right,${theme.accentMain}33, ${theme.accentMain}cc),url(${project.image}) no-repeat center` }}>
                     </div>
                     <div className="Projects__infoWrapper col-md-4">
                       <div className="Projects__info">
-                        <h4>{project.title}</h4>
-                        <h5>{project.subtitle}</h5>
-                        <p>{project.description}</p>
-                        <a href={project.demoLink}>Demo</a>
-                        <a href={project.repoLink}>Source Code</a>
+                        <h4 style={accentElementStyle}>{project.title}</h4>
+                        <p style={{ backgroundColor: theme.bgTweaked }}>
+                          Built with: {project.techStack.join(', ')}<br />
+                          {project.description}
+                        </p>
+                        <ul>
+                          <li><a href={project.demoLink} style={accentElementStyle}>DEMO</a></li>
+                          <li><a href={project.repoLink} style={accentElementStyle}>SRC</a></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
