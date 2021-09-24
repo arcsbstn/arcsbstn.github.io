@@ -6,13 +6,14 @@
   position: relative;
   top: 20vh;
 
-  h1{
+  h1 {
     font-size: 5em;
     font-weight: 600;
   }
   
   h2 {
     font-size: 3em;
+    margin-bottom: 0.5em;
   }
 
   .Hero__links {
@@ -30,6 +31,20 @@
       border: 3px solid;
       border-radius: 10px;
       padding: 15px 20px 10px 20px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 3em;
+    }
+    
+    h2 {
+      font-size: 2.3em;
+    }
+
+    .Hero__links {
+      font-size: 1.8em;
     }
   }
 }
