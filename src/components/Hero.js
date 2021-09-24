@@ -23,7 +23,7 @@ export default function Hero() {
               <Resume />
             </li>
             <li>
-              <a style={{ color: theme.heroAccent }} href='#projects'><i className='fa fa-tasks' /> Projects</a>
+              <a style={{ color: theme.heroAccent }} href='#projects'>Projects</a>
             </li>
           </ul>
         </div>
