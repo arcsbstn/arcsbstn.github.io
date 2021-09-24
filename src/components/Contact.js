@@ -22,22 +22,22 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  function encode(data) {
-    return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  }
+  // function encode(data) {
+  //   return Object.keys(data)
+  //     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+  //     .join('&');
+  // }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', name, email, message }),
-    })
-      .then(() => console.log('Message sent!'))
-      .catch((error) => console.error(error));
-  }
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({ 'form-name': 'contact', name, email, message }),
+  //   })
+  //     .then(() => console.log('Message sent!'))
+  //     .catch((error) => console.error(error));
+  // }
 
   return (
     <section id='contact'
@@ -47,7 +47,7 @@ export default function Contact() {
           <h3 style={{ color: theme.accentMain }}>Contact</h3>
           <form id='contact'
             name='contact'
-            onSubmit={handleSubmit}
+            onSubmit='submit'
             method='POST'
             data-netlify='true'>
             <div className='row'>
