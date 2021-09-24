@@ -7,11 +7,11 @@ export default function NavLinks(props) {
 
   let toggleIcon = isDark ? 'fa fa-sun-o' : 'fa fa-moon-o'
   const ulStyle = {
-    backgroundColor: theme.stripBg
+    backgroundColor: theme.bgMain
   }
   const toggleIconStyle = {
     color: theme.stripText,
-    border: `1px solid ${theme.stripText}`,
+    border: `1px solid ${theme.text}`,
     borderRadius: '100%',
     paddingTop: '6px',
     paddingRight: '1px',
@@ -22,8 +22,8 @@ export default function NavLinks(props) {
   return (
     <ul style={ulStyle}>
       <li><Resume isNav='true' /></li>
-      <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#projects'>Projects</a></li>
-      <li><a onClick={props.closeMobNav} style={{ color: theme.stripText }} href='#contact'>Contact</a></li>
+      <li><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#projects'>Projects</a></li>
+      <li><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#contact'>Contact</a></li>
       <li>
         <button onClick={toggleTheme}>
           <i className={toggleIcon} aria-hidden='true' style={toggleIconStyle} />

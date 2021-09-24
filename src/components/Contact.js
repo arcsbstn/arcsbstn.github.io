@@ -6,16 +6,15 @@ import { ThemeContext } from '../contexts/theme'
 export default function Contact() {
   const [{ theme, isDark }] = useContext(ThemeContext)
   const contactStyle = {
-    backgroundColor: theme.contactBg,
-    color: theme.contactTextareaText
+    backgroundColor: theme.bgMain,
   }
   const textareaStyle = {
-    backgroundColor: theme.contactTextareaBg,
-    color: theme.contactTextareaText
+    backgroundColor: theme.bgTweaked,
+    color: theme.text
   }
   const buttonStyle = {
-    backgroundColor: theme.contactAccent,
-    color: isDark ? theme.contactTextareaText : theme.contactTextareaBg
+    backgroundColor: theme.accentMain,
+    color: theme.text
   }
 
   const [name, setName] = useState('')

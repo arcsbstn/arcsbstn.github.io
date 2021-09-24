@@ -6,8 +6,8 @@ export default function Resume(props) {
   const [{ theme }] = useContext(ThemeContext)
   const resumeStyle = {
     color: props.isNav
-      ? theme.stripText
-      : theme.heroAccent
+      ? theme.text
+      : theme.accentMain
   }
 
   return (

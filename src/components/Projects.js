@@ -8,11 +8,9 @@ export default function Projects() {
 
   return (
     <section id='projects'
-      style={{ color: theme.projectsAccent }}>
+      style={{ color: theme.text }}>
       <div className='Projects__wrapper'>
-        <div className='Projects__primaryBg' style={{ backgroundColor: theme.projectsBg2 }}>
-          <div className='Projects__accentBg' style={{ backgroundColor: theme.projectsBg1 }}>
-          </div>
+        <div className='Projects__primaryBg' style={{ backgroundColor: theme.bgMain }}>
           <div className='General__wrapper'>
             <div className='Projects__contentWrapper container d-flex flex-wrap flex-row'>
               <h3>Projects</h3>

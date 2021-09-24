@@ -2,34 +2,18 @@ import { createContext, useEffect, useState } from 'react'
 
 const themes = {
   dark: {
-    stripBg: '#051013',
-    stripText: '#E7B479',
-    heroBg: '#292E33',
-    heroAccent: '#B16449',
-    heroText: '#DAC09E',
-    projectsBg1: '#843226',
-    projectsBg2: '#3A4E52',
-    projectsAccent: '#DFB681',
-    projectsText: '#3A4E52',
-    contactBg: '#292E33',
-    contactAccent: '#B16449',
-    contactTextareaBg: '#3A4E52',
-    contactTextareaText: '#D7C1A1'
+    bgMain: '#1F3853',
+    bgTweaked: '#122131',
+    accentMain: '#E18168',
+    accentTweaked: '#EF5C42',
+    text: '#F6F4EA'
   },
   light: {
-    stripBg: '#9A634F',
-    stripText: '#E7B479',
-    heroBg: '#FEEEED',
-    heroAccent: '#DB846A',
-    heroText: '#CAC5B5',
-    projectsBg1: '#CF886F',
-    projectsBg2: '#FADCD1',
-    projectsAccent: '#DFB681',
-    projectsText: '#926553',
-    contactBg: '#C9C5B7',
-    contactAccent: '#CF886E',
-    contactTextareaBg: '#F9DCD2',
-    contactTextareaText: '#CF886F'
+    bgMain: '#F6F4EA',
+    bgTweaked: '#CED4C2',
+    accentMain: '#E18168',
+    accentTweaked: '#EF5C42',
+    text: '#1F3853'
   }
 }
 

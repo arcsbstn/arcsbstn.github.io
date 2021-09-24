@@ -6,8 +6,8 @@ import { ThemeContext } from '../contexts/theme'
 export default function Footer() {
   const [{ theme }] = useContext(ThemeContext)
   const footerStyle = {
-    backgroundColor: theme.stripBg,
-    color: theme.stripText
+    backgroundColor: theme.bgMain,
+    color: theme.text
   }
 
   return (

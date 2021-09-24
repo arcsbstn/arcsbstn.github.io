@@ -8,8 +8,8 @@ import WebNav from './WebNav'
 export default function Navbar() {
   const [{ theme }] = useContext(ThemeContext)
   const stripStyle = {
-    backgroundColor: theme.stripBg,
-    color: theme.stripText
+    backgroundColor: theme.bgMain,
+    color: theme.text
   }
 
   return (
