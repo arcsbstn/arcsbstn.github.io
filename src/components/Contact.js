@@ -18,27 +18,6 @@ export default function Contact() {
     color: theme.text
   }
 
-  // const [name, setName] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [message, setMessage] = useState('')
-
-  // function encode(data) {
-  //   return Object.keys(data)
-  //     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-  //     .join('&');
-  // }
-
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({ 'form-name': 'contact', name, email, message }),
-  //   })
-  //     .then(() => console.log('Message sent!'))
-  //     .catch((error) => console.error(error));
-  // }
-
   return (
     <section id='contact'
       style={contactStyle}>
@@ -47,15 +26,14 @@ export default function Contact() {
           <h3 style={{ color: theme.accentMain }}>Contact</h3>
           <form id='contact'
             name='contact'
-            onSubmit='submit'
             method='POST'
             data-netlify='true'>
+            <input type='hidden' name='form-name' value='contact-form' />
             <div className='row'>
               <label htmlFor='name'>Name</label>
               <input id='name'
                 name='name'
                 type='text'
-                // onChange={(e) => { setName(e.target.value) }}
                 style={textareaStyle}
                 placeholder='Your Name' />
             </div>
@@ -64,7 +42,6 @@ export default function Contact() {
               <input id='email'
                 name='email'
                 type='email'
-                // onChange={(e) => { setEmail(e.target.value) }}
                 style={textareaStyle}
                 placeholder='your@email.com' />
             </div>
@@ -72,7 +49,6 @@ export default function Contact() {
               <label htmlFor='message'>Message</label>
               <textarea id='message'
                 name='message'
-                // onChange={(e) => { setMessage(e.target.value) }}
                 style={textareaStyle} />
             </div>
             <div className='row'>
