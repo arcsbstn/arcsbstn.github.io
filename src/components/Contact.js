@@ -7,6 +7,7 @@ export default function Contact() {
   const [{ theme, isDark }] = useContext(ThemeContext)
   const contactStyle = {
     backgroundColor: theme.bgMain,
+    color: theme.text
   }
   const textareaStyle = {
     backgroundColor: theme.bgTweaked,
@@ -43,7 +44,7 @@ export default function Contact() {
       style={contactStyle}>
       <div className='General__wrapper'>
         <div className='Contact__contentWrapper'>
-          <h3 style={{ color: theme.contactAccent }}>Contact</h3>
+          <h3 style={{ color: theme.accentMain }}>Contact</h3>
           <form id='contact'
             name='contact'
             onSubmit={handleSubmit}
