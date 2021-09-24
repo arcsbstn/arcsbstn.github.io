@@ -2,22 +2,17 @@
   position: relative;
 }
 
-.Projects__accentBg {
-  position: relative;
-  height: 300px;
-}
-  
 .Projects__contentWrapper {
   position: relative;
 
   h3 {
     font-size: 1.8em;
-    margin: 0 auto;
+    margin: 1.5em auto;
   }
 
   .Projects__tile {
     height: 180px;
-    margin: 10px;
+    margin: 20px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -31,14 +26,49 @@
     position: absolute;
     left: -40px;
     top: 20px;
+    text-align: right;
+
+    h4 {
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p {
+      font-family: 1em;
+      line-height: 0.9em;
+      padding: 30px;
+      margin: 5px 0;
+    }
+  
+    ul {
+      font-weight: 600;
+      display: flex;
+      justify-content: right;
+      font-size: 0.8em;
+  
+      li {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+    }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 730px) {
     .Projects__info {
       position: relative;
       top: 0;
       left: 0;
       margin: -5px 0 30px 0;
+      text-align: left;
+
+      ul {
+        justify-content: left;
+        padding: 0;
+      }
+
+      li {
+        padding: 0;
+      }
     }
   }
 }
