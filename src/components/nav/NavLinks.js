@@ -19,7 +19,7 @@ export default function NavLinks(props) {
       <li><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#contact'>Contact</a></li>
       <li>
         <button onClick={toggleTheme}>
-          <i className={toggleIcon} aria-hidden='true' style={toggleIconStyle} />
+          <i className={toggleIcon} style={toggleIconStyle} />
         </button>
       </li>
     </ul>
