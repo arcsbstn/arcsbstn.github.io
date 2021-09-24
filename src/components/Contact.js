@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../contexts/theme'
 
 export default function Contact() {
-  const [{ theme, isDark }] = useContext(ThemeContext)
+  const [{ theme }] = useContext(ThemeContext)
   const contactStyle = {
     backgroundColor: theme.bgMain,
     color: theme.text
