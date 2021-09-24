@@ -24,11 +24,7 @@ export default function Contact() {
       <div className="General__wrapper">
         <div className="Contact__contentWrapper">
           <h3 style={{ color: theme.accentMain }}>Contact</h3>
-          <form id="contact"
-            name="contact"
-            method="POST"
-            data-netlify="true">
-            <input type="hidden" name="form-name" value="contact-form" />
+          <form name="contact" method="POST" data-netlify="true">
             <div className="row">
               <label htmlFor="name">Name</label>
               <input id="name"
