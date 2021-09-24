@@ -4,19 +4,12 @@ import Resume from '../Resume'
 
 export default function NavLinks(props) {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext)
-
   let toggleIcon = isDark ? 'fa fa-sun-o' : 'fa fa-moon-o'
   const ulStyle = {
     backgroundColor: theme.bgMain
   }
   const toggleIconStyle = {
-    color: theme.stripText,
-    border: `1px solid ${theme.text}`,
-    borderRadius: '100%',
-    paddingTop: '6px',
-    paddingRight: '1px',
-    width: '33px',
-    height: '33px'
+    color: theme.text
   }
 
   return (
