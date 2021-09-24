@@ -52,9 +52,6 @@ export default function Contact() {
                 style={textareaStyle} />
             </div>
             <div className='row'>
-              <div data-netlify-recaptcha='true'></div>
-            </div>
-            <div className='row'>
               <button type='submit' style={buttonStyle}>Submit</button>
             </div>
           </form>
