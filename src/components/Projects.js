@@ -15,7 +15,7 @@ export default function Projects() {
       <div className='Projects__wrapper'>
         <div className='Projects__primaryBg' style={{ backgroundColor: theme.bgMain }}>
           <div className='General__wrapper'>
-            <div className='Projects__contentWrapper container d-flex flex-wrap flex-row'>
+            <div className='Projects__contentWrapper container d-flex flex-wrap flex-row justify-content-center'>
               <h3 style={accentElementStyle}>Projects</h3>
               {projects.map((project, index) => {
                 return (
