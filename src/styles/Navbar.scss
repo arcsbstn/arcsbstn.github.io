@@ -20,6 +20,13 @@
   padding: 0;
   display: flex;
   align-items: center;
+
+  img {
+    width: 15px;
+    position: relative;
+    bottom: 3px;
+    margin-right: 10px;
+  }
 }
 
 .Navbar__links {

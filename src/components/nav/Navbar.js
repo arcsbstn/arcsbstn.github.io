@@ -11,6 +11,9 @@ export default function Navbar() {
     backgroundColor: theme.bgMain,
     color: theme.text
   }
+  const logoStyle = {
+    color: theme.accentTweaked,
+  }
 
   return (
     <nav id='navbar'
@@ -19,7 +22,10 @@ export default function Navbar() {
       <div className='General__wrapper'>
         <div className='Navbar__contentWrapper'>
           <div className='Navbar__logo'>
-            <a className='underline-on-hover' href='/'>Adrianne Sebastian</a>
+            <a className='underline-on-hover' href='/' style={logoStyle}>
+              <img  src='https://raw.githubusercontent.com/arcsbstn/arcsbstn.github.io/main/public/logo192.png'/>
+              Adrianne Sebastian
+            </a>
           </div>
           <div className='Navbar__links'>
             <MobNav />
