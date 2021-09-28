@@ -18,7 +18,11 @@ export default function Footer() {
       style={footerStyle}>
       <div className='General__wrapper'>
         <div className='Footer__contentWrapper'>
-          <p>Made with <i className='fa fa-heart' aria-hidden='true'></i> by Adrianne Sebastian</p>
+          <p>
+            <a href='https://github.com/arcsbstn/arcsbstn.github.io' target='_blank' rel='noreferrer' style={footerLinksStyle}>
+              Made with <i className='fa fa-heart'></i> by Adrianne Sebastian
+            </a>
+          </p>
           <ul className='Footer__links'>
             <li><a href='https://github.com/arcsbstn/' target='_blank' rel='noreferrer' style={footerLinksStyle}><i className='fa fa-github'></i></a></li>
             <li><a href='https://codepen.io/arcsbstn/' target='_blank' rel='noreferrer' style={footerLinksStyle}><i className='fa fa-codepen'></i></a></li>
