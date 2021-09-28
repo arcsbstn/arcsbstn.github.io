@@ -14,9 +14,9 @@ export default function NavLinks(props) {
 
   return (
     <ul style={ulStyle}>
-      <li><Resume isNav='true' /></li>
-      <li><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#projects'>Projects</a></li>
-      <li><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#contact'>Contact</a></li>
+      <li className='underline-on-hover'><Resume isNav='true' /></li>
+      <li className='underline-on-hover'><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#projects'>Projects</a></li>
+      <li className='underline-on-hover'><a onClick={props.closeMobNav} style={{ color: theme.text }} href='#contact'>Contact</a></li>
       <li>
         <button onClick={toggleTheme}>
           <i className={toggleIcon} style={toggleIconStyle} />

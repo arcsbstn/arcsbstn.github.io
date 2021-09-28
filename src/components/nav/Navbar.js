@@ -18,7 +18,9 @@ export default function Navbar() {
       style={stripStyle}>
       <div className='General__wrapper'>
         <div className='Navbar__contentWrapper'>
-          <div className='Navbar__logo'>Adrianne Sebastian</div>
+          <div className='Navbar__logo'>
+            <a className='underline-on-hover' href='/'>Adrianne Sebastian</a>
+          </div>
           <div className='Navbar__links'>
             <MobNav />
             <WebNav />

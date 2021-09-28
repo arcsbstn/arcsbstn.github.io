@@ -21,3 +21,26 @@ section {
   position: relative;
   top: 65px;
 }
+
+.underline-on-hover {
+  display: inline-block;
+  padding-bottom: 0.25em;
+  position: relative;
+}
+
+.underline-on-hover::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background-color: #EF5C42;
+  transition: width 0.1s ease-out;
+}
+
+.underline-on-hover:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
