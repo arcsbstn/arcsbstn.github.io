@@ -23,7 +23,8 @@ export default function Navbar() {
         <div className='Navbar__contentWrapper'>
           <div className='Navbar__logo'>
             <a className='underline-on-hover' href='/' style={logoStyle}>
-              <img  src='https://raw.githubusercontent.com/arcsbstn/arcsbstn.github.io/main/public/logo192.png'/>
+              <img alt='ARCSBSTN logo'
+                src='https://raw.githubusercontent.com/arcsbstn/arcsbstn.github.io/main/public/logo192.png'/>
               Adrianne Sebastian
             </a>
           </div>
