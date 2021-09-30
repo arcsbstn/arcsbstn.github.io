@@ -5,8 +5,11 @@ import { projects } from '../projectsList'
 
 export default function Projects() {
   const [{ theme }] = useContext(ThemeContext)
-  const accentElementStyle = {
+  const accentMainStyle = {
     color: theme.accentMain
+  }
+  const accentTweakedStyle = {
+    color: theme.accentTweaked
   }
 
   return (
@@ -16,7 +19,7 @@ export default function Projects() {
         <div className='Projects__primaryBg' style={{ backgroundColor: theme.bgMain }}>
           <div className='General__wrapper'>
             <div className='Projects__contentWrapper container d-flex flex-wrap flex-row justify-content-center'>
-              <h3 style={accentElementStyle}>Projects</h3>
+              <h3 style={accentMainStyle}>Projects</h3>
               {projects.map((project, index) => {
                 return (
                   <div className="row w-100 justify-content-center">
@@ -26,14 +29,14 @@ export default function Projects() {
                     </div>
                     <div className="Projects__infoWrapper col-md-4">
                       <div className="Projects__info">
-                        <h4 style={accentElementStyle}>{project.title}</h4>
+                        <h4 style={accentMainStyle}>{project.title}</h4>
                         <p style={{ backgroundColor: theme.bgTweaked }}>
                           Built with: {project.techStack.join(', ')}<br />
                           {project.description}
                         </p>
                         <ul>
-                          <li><a href={project.demoLink} style={accentElementStyle}>DEMO</a></li>
-                          <li><a href={project.repoLink} style={accentElementStyle}>SRC</a></li>
+                          <li><a href={project.demoLink} className='underline-on-hover' style={accentTweakedStyle}>DEMO</a></li>
+                          <li><a href={project.repoLink} className='underline-on-hover' style={accentTweakedStyle}>SRC</a></li>
                         </ul>
                       </div>
                     </div>
