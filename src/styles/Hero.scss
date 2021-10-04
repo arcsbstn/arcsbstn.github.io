@@ -26,6 +26,12 @@
       margin-right: 20px;
     }
 
+    a:focus, a:hover {
+      background-color: rgba(207, 157, 144, 0.3);
+      transition: all 0.3s ease;
+      transform: scale(1.1,1.1);
+    }
+
     a {
       border: 3px solid;
       padding: 15px 20px 10px 20px;
