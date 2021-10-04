@@ -44,6 +44,11 @@ export default function Projects() {
                 )
               })}
             </div>
+            <div className='text-center' style={{marginTop: '20px'}}>
+              <i className='fa fa-star' style={{marginRight: '20px'}}></i> 
+                More projects in <a href='https://github.com/arcsbstn/' target='_blank' rel='noreferrer' style={accentMainStyle}>GitHub</a> and <a href='https://codepen.io/arcsbstn/' target='_blank' rel='noreferrer' style={accentMainStyle}>CodePen</a> 
+              <i className='fa fa-star' style={{marginLeft: '20px'}}></i>
+            </div>
           </div>
         </div>
       </div>
