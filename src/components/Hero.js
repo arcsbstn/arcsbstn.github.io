@@ -17,7 +17,7 @@ export default function Hero() {
       <div className='General__wrapper'>
         <div className='Hero__wrapper'>
           <h1 style={{ color: theme.accentMain }}> Hi, I'm Adrianne!</h1>
-          <h2>Currently seeking opportunities to help build beautiful, useful, and useable experiences.</h2>
+          <h2>JavaScript developer, currently building cool things at <a className='underline-on-hover' target="_blank" style={{color: theme.text}} href="https://www.fpsinc.com/">Full Potential Solutions</a>.</h2>
           <ul className='Hero__links' style={{ color: theme.accentMain }}>
             <li>
               <Resume />
