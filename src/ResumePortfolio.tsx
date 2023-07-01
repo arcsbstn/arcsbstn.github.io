@@ -1,9 +1,18 @@
-function ResumePortfolio() {
+import { Hero, Profiles, Nav, About, Experience, Projects } from "./components";
+
+export default function ResumePortfolio() {
   return (
     <div>
-      Hello world!
+      <div>
+        <Hero />
+        <Nav />
+        <Profiles />
+      </div>
+      <div>
+        <About />
+        <Experience />
+        <Projects />
+      </div>
     </div>
-  )
+  );
 }
-
-export default ResumePortfolio;
