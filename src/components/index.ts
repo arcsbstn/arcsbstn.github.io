@@ -1,7 +1,2 @@
-export * from "./content/About";
-export * from "./content/Experience";
-export * from "./content/Projects";
-
-export * from "./sidebar/Hero";
-export * from "./sidebar/Nav";
-export * from "./sidebar/Profiles";
+export { default as Content } from "./content/Content";
+export { default as Sidebar } from "./sidebar/Sidebar";
