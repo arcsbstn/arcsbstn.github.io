@@ -1,4 +1,4 @@
-export function Profiles() {
+export default function Profiles() {
   return (
     <ul>
       <li>GitHub</li>

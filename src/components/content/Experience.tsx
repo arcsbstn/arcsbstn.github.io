@@ -1,4 +1,4 @@
-export function Experience() {
+export default function Experience() {
   const experienceList = ["exp 1", "exp 2", "exp 3"];
   return (
     <div>

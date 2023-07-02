@@ -1,4 +1,4 @@
-export function Hero() {
+export default function Hero() {
   return (
     <div>
       <h1>
@@ -6,7 +6,7 @@ export function Hero() {
       </h1>
       <h2>
         Software Developer at{" "}
-        <a target="_blank" href="https://www.fpsinc.com/aboutus">
+        <a target="_blank" rel="noreferrer" href="https://www.fpsinc.com/aboutus">
           Full Potential Solutions
         </a>
       </h2>

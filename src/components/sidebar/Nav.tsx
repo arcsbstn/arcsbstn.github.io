@@ -1,4 +1,4 @@
-export function Nav() {
+export default function Nav() {
   return (
     <ul>
       <li>About</li>
