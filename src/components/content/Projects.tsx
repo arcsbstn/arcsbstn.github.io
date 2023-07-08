@@ -48,8 +48,7 @@ const projectList = [
 
 export default function Projects() {
   return (
-    <div>
-      <h3>Projects</h3>
+    <div id="projects">
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink }) => (
           <div>

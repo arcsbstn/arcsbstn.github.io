@@ -1,7 +1,6 @@
 export default function About() {
   return (
-    <div>
-      <h3>About</h3>
+    <div id="about">
       <p>
         Wanted to mix my enthusiasm for visual communication with my electronics
         engineering background, and somehow strong-armed my way into web
