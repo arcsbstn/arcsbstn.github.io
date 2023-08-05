@@ -1,3 +1,7 @@
+import React, { useContext, useEffect } from "react";
+import { ActiveSectionContext } from "../../ResumePortfolio";
+import { useInView } from "react-intersection-observer";
+
 const projectList = [
   {
     title: "25+5 Clock",
@@ -47,8 +51,19 @@ const projectList = [
 ];
 
 export default function Projects() {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
+  const { ref: projectsRef, inView: projectsInView } = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    console.log({ projectsInView });
+    if (activeSection !== "projects" && projectsInView)
+      setActiveSection("projects");
+  }, [projectsInView]);
+
   return (
-    <div id="projects">
+    <div id="projects" ref={projectsRef} style={{ backgroundColor: "skyblue" }}>
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink }) => (
           <div>

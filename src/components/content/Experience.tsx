@@ -1,9 +1,16 @@
+import React, { useContext, useEffect } from "react";
+import { ActiveSectionContext } from "../../ResumePortfolio";
+import { useInView } from "react-intersection-observer";
+
 const experienceList = [
   {
     role: "Software Developer",
     organization: "Full Potential Solutions, Inc.",
     startEndDates: "2021 Oct - Present",
-    description: "",
+    description: `Participates in Scrum ceremonies
+    Demonstrates implemented features to the team and stakeholders
+    Manages and documents tasks using Jira
+    Implements product interfaces based on agreed-upon acceptance criteria and Figma mockups`,
     techStack: [
       "JavaScript",
       "Twilio",
@@ -30,8 +37,23 @@ const experienceList = [
 ];
 
 export default function Experience() {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
+  const { ref: experienceRef, inView: experienceInView } = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    console.log({ experienceInView });
+    if (activeSection !== "experience" && experienceInView)
+      setActiveSection("experience");
+  }, [experienceInView]);
+
   return (
-    <div id="experience">
+    <div
+      id="experience"
+      ref={experienceRef}
+      style={{ backgroundColor: "pink" }}
+    >
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
           <div>

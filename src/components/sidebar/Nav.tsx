@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ActiveSectionContext } from "../../ResumePortfolio";
+
 interface IHandleClick {
   e: any;
   section: string;
@@ -9,13 +12,20 @@ function handleClick({ e, section }: IHandleClick) {
 }
 
 export default function Nav() {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
+  console.log({ activeSection });
+
   return (
     <ul>
-      <li onClick={(e) => handleClick({ e, section: "about" })}>About</li>
-      <li onClick={(e) => handleClick({ e, section: "experience" })}>
-        Experience
+      <li onClick={(e) => handleClick({ e, section: "about" })}>
+        About {activeSection === "about" ? "ACTIVE" : ""}
       </li>
-      <li onClick={(e) => handleClick({ e, section: "projects" })}>Projects</li>
+      <li onClick={(e) => handleClick({ e, section: "experience" })}>
+        Experience {activeSection === "experience" ? "ACTIVE" : ""}
+      </li>
+      <li onClick={(e) => handleClick({ e, section: "projects" })}>
+        Projects {activeSection === "projects" ? "ACTIVE" : ""}
+      </li>
     </ul>
   );
 }
