@@ -18,9 +18,6 @@ export default function Nav() {
 
   return (
     <ul>
-      <li onClick={(e) => handleClick({ e, section: "about" })}>
-        About {activeSection === EContent.ABOUT ? "ACTIVE" : ""}
-      </li>
       <li onClick={(e) => handleClick({ e, section: "experience" })}>
         Experience {activeSection === EContent.EXPERIENCE ? "ACTIVE" : ""}
       </li>
