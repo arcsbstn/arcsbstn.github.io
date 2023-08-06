@@ -10,6 +10,10 @@ export default function Hero() {
           Full Potential Solutions
         </a>
       </h2>
+      <p>
+        Crafting experiences for the web. I help organizations create products
+        that are beautiful, useful, and useable.
+      </p>
     </div>
   );
 }

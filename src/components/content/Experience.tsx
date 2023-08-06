@@ -8,10 +8,7 @@ const experienceList = [
     role: "Software Developer",
     organization: "Full Potential Solutions, Inc.",
     startEndDates: "2021 Oct - Present",
-    description: `Participates in Scrum ceremonies
-    Demonstrates implemented features to the team and stakeholders
-    Manages and documents tasks using Jira
-    Implements product interfaces based on agreed-upon acceptance criteria and Figma mockups`,
+    description: `Contribute to the development of Xcelerate, a contact center solution powered by the Twilio Flex platform. Key responsibilities involved creating UIs for Bulk Data Upload from CSV Files, Technical Support Documentation, Admin Configuration, and Multiple Outbound Numbers Configuration.`,
     techStack: [
       "JavaScript",
       "Twilio",
@@ -25,14 +22,14 @@ const experienceList = [
     role: "Junior Software Engineer",
     organization: "Reekoh, Inc.",
     startEndDates: "2019 May - 2021 Apr",
-    description: "",
+    description: `Developed modular plugins to seamlessly integrate RESTful services from diverse enterprise solutions into the Reekoh platform. Collaborated closely with the service engineering team and the organization's CTO throughout the entire software development lifecycle, encompassing the design, prototyping, development, testing, delivery, and maintenance of each plugin.`,
     techStack: ["JavaScript", "Node.js", "Postman", "MongoDB"],
   },
   {
     role: "Associate Software Engineer",
     organization: "Accenture, Inc.",
     startEndDates: "2018 Feb - 2019 Apr",
-    description: "",
+    description: "Temporarily assigned to the Virtual Chatbot team, where I resolved bugs and integrated the Elasticsearch and Kibana visualization engines with the chatbot.",
     techStack: ["JavaScript, Node.js, AngularJS"],
   },
 ];
@@ -40,7 +37,7 @@ const experienceList = [
 export default function Experience() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
   const { ref: experienceRef, inView: experienceInView } = useInView({
-    threshold: 0.2,
+    threshold: 0.5,
   });
 
   useEffect(() => {
