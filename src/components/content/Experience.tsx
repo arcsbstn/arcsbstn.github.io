@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from "react";
-import { ActiveSectionContext } from "../../ResumePortfolio";
+import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { EContent } from "../../enums";
+import { ActiveSectionContext } from "../../ResumePortfolio";
 
 const experienceList = [
   {
@@ -43,14 +44,13 @@ export default function Experience() {
   });
 
   useEffect(() => {
-    console.log({ experienceInView });
-    if (activeSection !== "experience" && experienceInView)
-      setActiveSection("experience");
+    if (activeSection !== EContent.EXPERIENCE && experienceInView)
+      setActiveSection(EContent.EXPERIENCE);
   }, [experienceInView]);
 
   return (
     <div
-      id="experience"
+      id={EContent.EXPERIENCE}
       ref={experienceRef}
       style={{ backgroundColor: "pink" }}
     >

@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from "react";
-import { ActiveSectionContext } from "../../ResumePortfolio";
+import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { EContent } from "../../enums";
+import { ActiveSectionContext } from "../../ResumePortfolio";
 
 const projectList = [
   {
@@ -58,12 +59,16 @@ export default function Projects() {
 
   useEffect(() => {
     console.log({ projectsInView });
-    if (activeSection !== "projects" && projectsInView)
-      setActiveSection("projects");
+    if (activeSection !== EContent.PROJECTS && projectsInView)
+      setActiveSection(EContent.PROJECTS);
   }, [projectsInView]);
 
   return (
-    <div id="projects" ref={projectsRef} style={{ backgroundColor: "skyblue" }}>
+    <div
+      id={EContent.PROJECTS}
+      ref={projectsRef}
+      style={{ backgroundColor: "skyblue" }}
+    >
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink }) => (
           <div>

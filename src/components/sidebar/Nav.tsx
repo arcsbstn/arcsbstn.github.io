@@ -12,7 +12,7 @@ function handleClick({ e, section }: IHandleClick) {
 }
 
 export default function Nav() {
-  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
+  const [activeSection] = useContext(ActiveSectionContext);
   console.log({ activeSection });
 
   return (

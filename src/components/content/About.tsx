@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from "react";
-import { ActiveSectionContext } from "../../ResumePortfolio";
+import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { EContent } from "../../enums";
+import { ActiveSectionContext } from "../../ResumePortfolio";
 
 export default function About() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
@@ -9,12 +10,12 @@ export default function About() {
   });
 
   useEffect(() => {
-    console.log({ aboutInView });
-    if (activeSection !== "about" && aboutInView) setActiveSection("about");
+    if (activeSection !== EContent.ABOUT && aboutInView)
+      setActiveSection(EContent.ABOUT);
   }, [aboutInView]);
 
   return (
-    <div id="about" style={{ width: "400px" }} ref={aboutRef}>
+    <div id={EContent.ABOUT} ref={aboutRef}>
       <p>
         I build things that live on the web, working with teams and helping
         organizations create products that are beautiful, useful, and useable.
