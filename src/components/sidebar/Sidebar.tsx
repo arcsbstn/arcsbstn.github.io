@@ -10,11 +10,12 @@ const SidebarWrapper = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  max-width: 700px;
+  max-width: 390px;
 
-  @media (max-width: 1080px) {
+  @media (max-width: 780px) {
     position: relative;
     flex-direction: column;
+    max-width: 780px;
   }
 `;
 

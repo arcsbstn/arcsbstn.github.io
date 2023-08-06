@@ -6,9 +6,11 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1200px;
+  justify-content: center;
+  gap: 1em;
 
-  @media (max-width: 1080px) {
+  @media (max-width: 780px) {
     flex-direction: column;
   }
 `;
