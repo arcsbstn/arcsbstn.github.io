@@ -2,7 +2,7 @@
   "name": "arcsbstn.github.io",
   "version": "3.0.0",
   "private": true,
-  "homepage": "https://arcsbstn.github.io/arcsbstn.github.io",
+  "homepage": "https://arcsbstn.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
