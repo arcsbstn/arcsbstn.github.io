@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.f3664977.js",
+    "main.js": "/static/js/main.a5c31725.js",
+    "static/media/arcsbstn-cv-2023.pdf": "/static/media/arcsbstn-cv-2023.4d52a6dbe35f1a5565c7.pdf",
     "index.html": "/index.html",
-    "main.f3664977.js.map": "/static/js/main.f3664977.js.map"
+    "main.a5c31725.js.map": "/static/js/main.a5c31725.js.map"
   },
   "entrypoints": [
-    "static/js/main.f3664977.js"
+    "static/js/main.a5c31725.js"
   ]
 }
