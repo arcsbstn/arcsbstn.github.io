@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { EContent } from "../../enums";
+
+import { content, experienceList } from "../../constants";
 import { ActiveSectionContext } from "../../ResumePortfolio";
-import { experienceList } from "./experienceList";
 
 export default function Experience() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
@@ -11,12 +11,12 @@ export default function Experience() {
   });
 
   useEffect(() => {
-    if (activeSection !== EContent.EXPERIENCE && experienceInView)
-      setActiveSection(EContent.EXPERIENCE);
+    if (activeSection !== content.EXPERIENCE && experienceInView)
+      setActiveSection(content.EXPERIENCE);
   }, [experienceInView]);
 
   return (
-    <div id={EContent.EXPERIENCE} ref={experienceRef}>
+    <div id={content.EXPERIENCE} ref={experienceRef}>
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
           <div>

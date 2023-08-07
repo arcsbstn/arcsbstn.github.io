@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { EContent } from "../../enums";
+
+import { content } from "../../constants";
 import { ActiveSectionContext } from "../../ResumePortfolio";
 
 interface IHandleClick {
@@ -19,10 +20,10 @@ export default function Nav() {
   return (
     <ul>
       <li onClick={(e) => handleClick({ e, section: "experience" })}>
-        Experience {activeSection === EContent.EXPERIENCE ? "ACTIVE" : ""}
+        Experience {activeSection === content.EXPERIENCE ? "ACTIVE" : ""}
       </li>
       <li onClick={(e) => handleClick({ e, section: "projects" })}>
-        Projects {activeSection === EContent.PROJECTS ? "ACTIVE" : ""}
+        Projects {activeSection === content.PROJECTS ? "ACTIVE" : ""}
       </li>
     </ul>
   );
