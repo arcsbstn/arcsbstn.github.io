@@ -8,15 +8,16 @@ const SidebarWrapper = styled.div`
   align-self: flex-start;
   flex-direction: column;
   overflow-y: auto;
-  padding: 5em 0;
   top: 0;
-
+  
+  padding: 5em 0;
   position: -webkit-sticky;
   position: sticky;
   max-width: 350px;
   height: 100vh;
 
   @media (max-width: 780px) {
+    padding: 5em 0 0 0;
     position: relative;
     max-width: 780px;
     height: auto;

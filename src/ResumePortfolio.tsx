@@ -4,12 +4,14 @@ import { Sidebar, Content } from "./components";
 
 const MainContainer = styled.div`
   display: flex;
-  flex-direction: row;
   margin: 0 auto;
   max-width: 1200px;
   justify-content: center;
-  gap: 1em;
-
+  gap: 1.8em;
+  padding: 0 2em;
+  
+  flex-direction: row;
+  
   @media (max-width: 780px) {
     flex-direction: column;
   }
