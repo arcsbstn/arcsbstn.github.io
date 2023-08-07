@@ -14,13 +14,19 @@ export default function Profiles() {
   return (
     <ProfilesWrapper>
       <li>
-        <GitHub />
+        <a href="https://github.com/arcsbstn" target="_blank">
+          <GitHub />
+        </a>
       </li>
       <li>
-        <CodePen />
+        <a href="https://codepen.io/arcsbstn" target="_blank">
+          <CodePen />
+        </a>
       </li>
       <li>
-        <LinkedIn />
+        <a href="https://www.linkedin.com/in/arcsbstn/" target="_blank">
+          <LinkedIn />
+        </a>
       </li>
     </ProfilesWrapper>
   );
