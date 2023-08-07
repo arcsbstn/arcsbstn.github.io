@@ -1,8 +1,18 @@
+import styled from "styled-components";
+
 import { CodePen, GitHub, LinkedIn } from "../../svg";
+
+const ProfilesWrapper = styled.ul`
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1em;
+`;
 
 export default function Profiles() {
   return (
-    <ul>
+    <ProfilesWrapper>
       <li>
         <GitHub />
       </li>
@@ -12,6 +22,6 @@ export default function Profiles() {
       <li>
         <LinkedIn />
       </li>
-    </ul>
+    </ProfilesWrapper>
   );
 }
