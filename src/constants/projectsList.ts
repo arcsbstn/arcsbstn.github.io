@@ -1,6 +1,6 @@
 export const projectList = [
   {
-    title: "25+5 Clock",
+    title: "Pomodoro Timer",
     techStack: ["React"],
     description:
       "Pomodoro timer with an alarm and the option to adjust break and work session lengths.",
@@ -13,21 +13,6 @@ export const projectList = [
     description: "Responsive product landing page for a fictitious cafe.",
     demoLink: "https://codepen.io/arcsbstn/full/LYyzOdM",
     repoLink: "https://codepen.io/arcsbstn/pen/LYyzOdM",
-  },
-  {
-    title: "Markdown Previewer",
-    techStack: ["React", "Marked", "Bootstrap"],
-    description:
-      "Responsive webapp for previewing Markdown syntax as rendered HTML.",
-    demoLink: "https://epic-ramanujan-65ff54.netlify.app/",
-    repoLink: "https://github.com/arcsbstn/fcc-markdown-previewer",
-  },
-  {
-    title: "Drum Machine",
-    techStack: ["React", "Bootstrap"],
-    description: "Drum machine pads for generating sick beats.",
-    demoLink: "https://hungry-kowalevski-20f07c.netlify.app/",
-    repoLink: "https://github.com/arcsbstn/fcc-drum-machine",
   },
   {
     title: "CSS Flexboxes Technical Documentation Page",
