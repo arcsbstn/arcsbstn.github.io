@@ -6,16 +6,20 @@ import Profiles from "./Profiles";
 
 const SidebarWrapper = styled.div`
   align-self: flex-start;
+  flex-direction: column;
   overflow-y: auto;
+  padding: 5em 0;
+  top: 0;
+
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  max-width: 390px;
+  max-width: 350px;
+  height: 100vh;
 
   @media (max-width: 780px) {
     position: relative;
-    flex-direction: column;
     max-width: 780px;
+    height: auto;
   }
 `;
 
