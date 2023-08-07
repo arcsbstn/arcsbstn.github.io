@@ -7,13 +7,13 @@ const ContentWrapper = styled.div`
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: 8em;
+  gap: 5em;
 
-  padding: 5em 0;
+  padding: 8em 0;
   max-width: 550px;
 
   @media (max-width: 780px) {
-    padding 0 0 5em 0;
+    padding 0 0 8em 0;
     max-width: 780px;
   }
 `;

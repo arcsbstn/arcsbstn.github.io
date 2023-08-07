@@ -7,7 +7,7 @@ const MainContainer = styled.div`
   margin: 0 auto;
   max-width: 1200px;
   justify-content: center;
-  gap: 1.8em;
+  gap: 8em;
   padding: 0 2em;
   
   flex-direction: row;
