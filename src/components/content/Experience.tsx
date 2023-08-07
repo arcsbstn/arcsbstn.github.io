@@ -28,6 +28,15 @@ export default function Experience() {
           </div>
         )
       )}
+      <h4>
+        <a
+          href={require("../../static/arcsbstn-cv-2023.pdf")}
+          target="_blank"
+          rel="noreferrer"
+        >
+          View detailed curriculum vitae
+        </a>
+      </h4>
     </div>
   );
 }
