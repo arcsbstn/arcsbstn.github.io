@@ -7,12 +7,12 @@ const MainContainer = styled.div`
   margin: 0 auto;
   max-width: 1200px;
   justify-content: center;
-  gap: 8em;
+  gap: 3.3em;
   padding: 0 2em;
-  
+
   flex-direction: row;
-  
-  @media (max-width: 780px) {
+
+  @media (max-width: 980px) {
     flex-direction: column;
   }
 `;

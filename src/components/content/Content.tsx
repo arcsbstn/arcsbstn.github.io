@@ -12,9 +12,9 @@ const ContentWrapper = styled.div`
   padding: 8em 0;
   max-width: 550px;
 
-  @media (max-width: 780px) {
+  @media (max-width: 980px) {
     padding 0 0 8em 0;
-    max-width: 780px;
+    max-width: 980px;
   }
 `;
 
