@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Chip } from "../common";
+import { Chip, Deck } from "../common";
 import { content, experienceList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
 
@@ -18,11 +18,7 @@ export default function Experience() {
   }, [experienceInView]);
 
   return (
-    <div
-      id={content.EXPERIENCE}
-      ref={experienceRef}
-      style={{ display: "flex", flexDirection: "column", gap: "1.8em" }}
-    >
+    <Deck id={content.EXPERIENCE} ref={experienceRef}>
       {!isWebView && <h3>{content.EXPERIENCE.toUpperCase()}</h3>}
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
@@ -48,6 +44,6 @@ export default function Experience() {
           View detailed curriculum vitae
         </a>
       </h5>
-    </div>
+    </Deck>
   );
 }
