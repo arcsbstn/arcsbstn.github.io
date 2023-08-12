@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
+import { content } from "./constants";
 import { Sidebar, Content } from "./components";
 
 const MainContainer = styled.div`
@@ -20,7 +22,7 @@ const MainContainer = styled.div`
 export const ActiveSectionContext = React.createContext<any>(null);
 
 export default function ResumePortfolio() {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState(content.EXPERIENCE);
 
   return (
     <ActiveSectionContext.Provider value={[activeSection, setActiveSection]}>

@@ -34,11 +34,8 @@ const AnimatedDash = styled.div<{ $isActiveSection?: boolean }>`
 
 const StyledSpan = styled.span<{ $isActiveSection?: boolean }>`
   font-size: 0.9em;
-
   cursor: pointer;
-  color: ${(props) => {
-    return props.$isActiveSection ? "blue" : "black";
-  }};
+  color: ${(props) => (props.$isActiveSection ? "blue" : "black")};
 `;
 
 const NavUl = styled.ul`
