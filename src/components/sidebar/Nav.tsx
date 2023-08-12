@@ -1,10 +1,11 @@
 import { useContext } from "react";
+import styled from "styled-components";
 
 import { content } from "../../constants";
 import { ActiveSectionContext } from "../../ResumePortfolio";
 
 interface IHandleClick {
-  e: any;
+  e: React.MouseEvent<HTMLUListElement>;
   section: string;
 }
 
@@ -13,18 +14,30 @@ function handleClick({ e, section }: IHandleClick) {
   window.location.replace(`/#${section}`);
 }
 
+const StyledLi = styled.li<{ $isActiveSection?: boolean }>`
+  cursor: pointer;
+  color: ${(props) => {
+    return props.$isActiveSection ? "blue" : "black";
+  }};
+`;
+
 export default function Nav() {
   const [activeSection] = useContext(ActiveSectionContext);
-  console.log({ activeSection });
 
   return (
     <ul>
-      <li onClick={(e) => handleClick({ e, section: "experience" })}>
-        Experience {activeSection === content.EXPERIENCE ? "ACTIVE" : ""}
-      </li>
-      <li onClick={(e) => handleClick({ e, section: "projects" })}>
-        Projects {activeSection === content.PROJECTS ? "ACTIVE" : ""}
-      </li>
+      <StyledLi
+        $isActiveSection={activeSection === content.EXPERIENCE}
+        onClick={(e: any) => handleClick({ e, section: content.EXPERIENCE })}
+      >
+        Experience
+      </StyledLi>
+      <StyledLi
+        $isActiveSection={activeSection === content.PROJECTS}
+        onClick={(e: any) => handleClick({ e, section: content.PROJECTS })}
+      >
+        Projects
+      </StyledLi>
     </ul>
   );
 }
