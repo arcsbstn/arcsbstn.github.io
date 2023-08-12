@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
+import { Chip } from "../common";
 import { content, projectList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
 
@@ -17,7 +18,11 @@ export default function Projects() {
   }, [projectsInView]);
 
   return (
-    <div id={content.PROJECTS} ref={projectsRef}>
+    <div
+      id={content.PROJECTS}
+      ref={projectsRef}
+      style={{ display: "flex", flexDirection: "column", gap: "1.8em" }}
+    >
       {!isWebView && <h3>{content.PROJECTS.toUpperCase()}</h3>}
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink }) => (
@@ -25,12 +30,9 @@ export default function Projects() {
             <h5>{title}</h5>
             <p>{description}</p>
             <p>
-              Tech Stack:
-              <ul>
-                {techStack.map((e) => (
-                  <li>{e}</li>
-                ))}
-              </ul>
+              {techStack.map((e) => (
+                <Chip>{e}</Chip>
+              ))}
             </p>
           </div>
         )
