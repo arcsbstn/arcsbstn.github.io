@@ -16,7 +16,11 @@ export default function Experience() {
   }, [experienceInView]);
 
   return (
-    <div id={content.EXPERIENCE} ref={experienceRef}>
+    <div
+      id={content.EXPERIENCE}
+      ref={experienceRef}
+      style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
+    >
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
           <div>
@@ -28,7 +32,7 @@ export default function Experience() {
           </div>
         )
       )}
-      <h4>
+      <h5>
         <a
           href={require("../../static/arcsbstn-cv-2023.pdf")}
           target="_blank"
@@ -36,7 +40,7 @@ export default function Experience() {
         >
           View detailed curriculum vitae
         </a>
-      </h4>
+      </h5>
     </div>
   );
 }
