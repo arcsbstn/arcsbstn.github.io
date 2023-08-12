@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Chip, Deck } from "../common";
+import { Card, Chip, Deck } from "../common";
 import { content, projectList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
 
@@ -22,7 +22,7 @@ export default function Projects() {
       {!isWebView && <h3>{content.PROJECTS.toUpperCase()}</h3>}
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink }) => (
-          <div>
+          <Card>
             <h5>{title}</h5>
             <p>{description}</p>
             <p>
@@ -30,7 +30,7 @@ export default function Projects() {
                 <Chip>{e}</Chip>
               ))}
             </p>
-          </div>
+          </Card>
         )
       )}
     </Deck>

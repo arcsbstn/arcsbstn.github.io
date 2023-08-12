@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Chip, Deck } from "../common";
+import { Card, Chip, Deck } from "../common";
 import { content, experienceList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
 
@@ -22,7 +22,7 @@ export default function Experience() {
       {!isWebView && <h3>{content.EXPERIENCE.toUpperCase()}</h3>}
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
-          <div>
+          <Card>
             <h4>{role}</h4>
             <h5>{organization}</h5>
             <h6>{startEndDates}</h6>
@@ -32,7 +32,7 @@ export default function Experience() {
                 <Chip>{e}</Chip>
               ))}
             </p>
-          </div>
+          </Card>
         )
       )}
       <h5>
