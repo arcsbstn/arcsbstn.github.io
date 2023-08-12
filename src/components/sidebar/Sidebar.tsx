@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import styled from "styled-components";
 
 import Hero from "./Hero";
 import Nav from "./Nav";
 import Profiles from "./Profiles";
+import { MediaWidthContext } from "../../ResumePortfolio";
 
 const SidebarWrapper = styled.div`
   align-self: flex-start;
@@ -27,10 +29,12 @@ const SidebarWrapper = styled.div`
 `;
 
 export default function Sidebar() {
+  const isWebView = useContext(MediaWidthContext);
+
   return (
     <SidebarWrapper>
       <Hero />
-      <Nav />
+      {isWebView && <Nav />}
       <Profiles />
     </SidebarWrapper>
   );

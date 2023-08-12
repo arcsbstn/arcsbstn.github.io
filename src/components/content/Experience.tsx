@@ -2,10 +2,11 @@ import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { content, experienceList } from "../../constants";
-import { ActiveSectionContext } from "../../ResumePortfolio";
+import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
 
 export default function Experience() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
+  const isWebView = useContext(MediaWidthContext);
   const { ref: experienceRef, inView: experienceInView } = useInView({
     threshold: 0.5,
   });
@@ -21,6 +22,7 @@ export default function Experience() {
       ref={experienceRef}
       style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
     >
+      {!isWebView && <h3>{content.EXPERIENCE.toUpperCase()}</h3>}
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
           <div>
