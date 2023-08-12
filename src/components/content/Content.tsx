@@ -7,7 +7,7 @@ const ContentWrapper = styled.div`
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: 5em;
+  gap: 8em;
 
   padding: 8em 0;
   max-width: 550px;
