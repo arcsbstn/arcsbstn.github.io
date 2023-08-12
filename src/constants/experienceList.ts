@@ -31,6 +31,6 @@ export const experienceList = [
     startEndDates: "2018 Feb - 2019 Apr",
     description:
       "Temporarily assigned to the Virtual Chatbot team, where I resolved bugs and integrated the Elasticsearch and Kibana visualization engines with the chatbot.",
-    techStack: ["JavaScript, Node.js, AngularJS", "MongoDB"],
+    techStack: ["JavaScript", "Node.js", "AngularJS", "MongoDB"],
   },
 ];
