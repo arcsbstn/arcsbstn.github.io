@@ -10,7 +10,7 @@ const ContentWrapper = styled.div`
   gap: 8em;
 
   padding: 8em 0;
-  max-width: 550px;
+  max-width: 750px;
 
   @media (max-width: 980px) {
     padding 0 0 8em 0;

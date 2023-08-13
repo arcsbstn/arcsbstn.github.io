@@ -22,15 +22,7 @@ export default function Projects() {
       {!isWebView && <h3>{content.PROJECTS.toUpperCase()}</h3>}
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink }) => (
-          <Card>
-            <h5>{title}</h5>
-            <p>{description}</p>
-            <p>
-              {techStack.map((e) => (
-                <Chip>{e}</Chip>
-              ))}
-            </p>
-          </Card>
+          <Card title={title} description={description} techStack={techStack} />
         )
       )}
     </Deck>

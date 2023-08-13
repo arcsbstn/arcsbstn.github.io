@@ -22,17 +22,13 @@ export default function Experience() {
       {!isWebView && <h3>{content.EXPERIENCE.toUpperCase()}</h3>}
       {experienceList.map(
         ({ organization, role, startEndDates, description, techStack }) => (
-          <Card>
-            <h4>{role}</h4>
-            <h5>{organization}</h5>
-            <h6>{startEndDates}</h6>
-            <p>{description}</p>
-            <p>
-              {techStack.map((e) => (
-                <Chip>{e}</Chip>
-              ))}
-            </p>
-          </Card>
+          <Card
+            title={role}
+            subtitle={organization}
+            description={description}
+            techStack={techStack}
+            leftComponent={startEndDates}
+          />
         )
       )}
       <h5>
