@@ -1,10 +1,9 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Card, Chip, Deck } from "../common";
+import { Card, Deck } from "../common";
 import { content, projectList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
-
 export default function Projects() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
   const isWebView = useContext(MediaWidthContext);
@@ -21,8 +20,19 @@ export default function Projects() {
     <Deck id={content.PROJECTS} ref={projectsRef}>
       {!isWebView && <h3>{content.PROJECTS.toUpperCase()}</h3>}
       {projectList.map(
-        ({ title, description, techStack, demoLink, repoLink }) => (
-          <Card title={title} description={description} techStack={techStack} />
+        ({ title, description, techStack, demoLink, repoLink, imgLink }) => (
+          <>
+            <Card
+              title={title}
+              description={description}
+              techStack={techStack}
+              leftComponent={
+                imgLink ? (
+                  <img style={{ width: "175px" }} src={imgLink} />
+                ) : null
+              }
+            />
+          </>
         )
       )}
     </Deck>
