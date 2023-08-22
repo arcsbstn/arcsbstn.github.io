@@ -1,9 +1,10 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Card, Chip, Deck } from "../common";
+import { Card, Deck, Link } from "../common";
 import { content, experienceList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
+import { OutgoingLink } from "../../svg";
 
 export default function Experience() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
@@ -32,13 +33,13 @@ export default function Experience() {
         )
       )}
       <h5>
-        <a
+        <Link
           href={require("../../static/arcsbstn-cv-2023.pdf")}
           target="_blank"
           rel="noreferrer"
         >
-          View detailed curriculum vitae
-        </a>
+          View detailed curriculum vitae <OutgoingLink />
+        </Link>
       </h5>
     </Deck>
   );

@@ -1,9 +1,11 @@
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Card, Deck } from "../common";
+import { Card, Deck, Link } from "../common";
 import { content, projectList } from "../../constants";
 import { ActiveSectionContext, MediaWidthContext } from "../../ResumePortfolio";
+import { OutgoingLink } from "../../svg";
+
 export default function Projects() {
   const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
   const isWebView = useContext(MediaWidthContext);
@@ -35,6 +37,15 @@ export default function Projects() {
           </>
         )
       )}
+      <h5>
+        <Link
+          href="https://codepen.io/arcsbstn/pens/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See more projects <OutgoingLink />
+        </Link>
+      </h5>
     </Deck>
   );
 }
