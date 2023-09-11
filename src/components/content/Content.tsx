@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Experience from "./Experience";
+import Footer from "./Footer";
 import Projects from "./Projects";
 
 const ContentWrapper = styled.div`
@@ -23,6 +24,7 @@ export default function Content() {
     <ContentWrapper>
       <Experience />
       <Projects />
+      <Footer />
     </ContentWrapper>
   );
 }
