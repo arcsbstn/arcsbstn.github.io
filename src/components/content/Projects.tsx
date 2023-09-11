@@ -24,16 +24,19 @@ export default function Projects() {
       {projectList.map(
         ({ title, description, techStack, demoLink, repoLink, imgLink }) => (
           <>
-            <Card
-              title={title}
-              description={description}
-              techStack={techStack}
-              leftComponent={
-                imgLink ? (
-                  <img style={{ width: "175px" }} src={imgLink} />
-                ) : null
+            <a href={demoLink} target="_blank" style={{color: 'black', textDecoration: 'none'}}>
+              <Card
+                title={title}
+                description={description
               }
-            />
+                techStack={techStack}
+                leftComponent={
+                  imgLink ? (
+                    <img style={{ width: "175px" }} src={imgLink} />
+                  ) : null
+                }
+              />
+            </a>
           </>
         )
       )}
