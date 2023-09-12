@@ -34,11 +34,11 @@ export default function Experience() {
       )}
       <h5>
         <Link
-          href={require("../../static/arcsbstn-cv-2023.pdf")}
+          href={require("../../static/arcsbstn-resume-2023.pdf")}
           target="_blank"
           rel="noreferrer"
         >
-          View detailed curriculum vitae <OutgoingLink />
+          View detailed resume <OutgoingLink />
         </Link>
       </h5>
     </Deck>
