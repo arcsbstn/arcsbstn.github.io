@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.56300f35.js",
-    "static/media/arcsbstn-cv-2023.pdf": "/static/media/arcsbstn-cv-2023.4d52a6dbe35f1a5565c7.pdf",
+    "main.js": "/static/js/main.62df4c43.js",
     "static/media/docs.png": "/static/media/docs.dfd2621c571f8baa743b.png",
     "static/media/calculator.png": "/static/media/calculator.f08963063abf22d7be17.png",
+    "static/media/arcsbstn-resume-2023.pdf": "/static/media/arcsbstn-resume-2023.bf4b98c43da64545e01a.pdf",
     "static/media/pomodoro.png": "/static/media/pomodoro.c2c2f5cdf8c479a7eb24.png",
     "index.html": "/index.html",
-    "main.56300f35.js.map": "/static/js/main.56300f35.js.map"
+    "main.62df4c43.js.map": "/static/js/main.62df4c43.js.map"
   },
   "entrypoints": [
-    "static/js/main.56300f35.js"
+    "static/js/main.62df4c43.js"
   ]
 }
