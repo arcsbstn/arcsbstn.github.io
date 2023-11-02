@@ -1,34 +1,41 @@
 import { createContext, useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { content } from "./constants";
-import { Sidebar, Content } from "./components";
+import { About, Hero, Nav } from "./components";
 
-const MainContainer = styled.div`
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  justify-content: center;
-  gap: 3.3em;
-  padding: 0 2em;
-
-  flex-direction: row;
-
-  @media (max-width: 980px) {
-    flex-direction: column;
+const RootWrapper = styled.div`
+  * {
+    margin: 0;
+    padding: 0;
   }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const ContentWrapper = styled.div`
+  padding: 0 2em;
+  max-width: 1000px;
+  margin: 0 auto;
 `;
 
 export const MediaWidthContext = createContext<any>(null);
 export const ActiveSectionContext = createContext<any>(null);
 
 export default function ResumePortfolio() {
-  const [activeSection, setActiveSection] = useState(content.EXPERIENCE);
-  const [isWebView, setIsWebView] = useState(true);
+  const [mediaWidth, setMediaWidth] = useState({
+    isExtraLargeView: true,
+    isLargeView: true,
+  });
 
   useEffect(() => {
     function handleResize() {
-      setIsWebView(window.innerWidth > 980);
+      setMediaWidth({
+        isExtraLargeView: window.innerWidth > 1250,
+        isLargeView: window.innerWidth > 790,
+      });
     }
 
     handleResize();
@@ -38,13 +45,14 @@ export default function ResumePortfolio() {
   }, []);
 
   return (
-    <MediaWidthContext.Provider value={isWebView}>
-      <ActiveSectionContext.Provider value={[activeSection, setActiveSection]}>
-        <MainContainer>
-          <Sidebar />
-          <Content />
-        </MainContainer>
-      </ActiveSectionContext.Provider>
+    <MediaWidthContext.Provider value={mediaWidth}>
+      <RootWrapper>
+        <Nav />
+        <ContentWrapper>
+          <Hero />
+          <About />
+        </ContentWrapper>
+      </RootWrapper>
     </MediaWidthContext.Provider>
   );
 }

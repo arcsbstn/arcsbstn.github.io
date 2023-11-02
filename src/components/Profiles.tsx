@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { CodePen, GitHub, LinkedIn } from "../../svg";
+import { CodePen, GitHub, LinkedIn } from "../svg";
 
 const ProfilesWrapper = styled.ul`
   padding: 0;
@@ -10,7 +10,7 @@ const ProfilesWrapper = styled.ul`
   gap: 1em;
 `;
 
-export default function Profiles() {
+export function Profiles() {
   return (
     <ProfilesWrapper>
       <li>
