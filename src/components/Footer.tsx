@@ -15,7 +15,7 @@ export function Footer() {
     <FooterWrapper isLargeView={isLargeView}>
       Adrianne Sebastian v4.0.0
       <br />
-      Updated 20231103 Site built using{" "}
+      Site built using{" "}
       <a href="https://create-react-app.dev/" target="_blank" rel="noreferrer">
         create-react-app
       </a>
