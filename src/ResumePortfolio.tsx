@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { About, Hero, Nav } from "./components";
+import { About, Hero, Nav, Footer } from "./components";
 
 const RootWrapper = styled.div`
   * {
@@ -51,6 +51,7 @@ export default function ResumePortfolio() {
         <ContentWrapper>
           <Hero />
           <About />
+          <Footer />
         </ContentWrapper>
       </RootWrapper>
     </MediaWidthContext.Provider>
