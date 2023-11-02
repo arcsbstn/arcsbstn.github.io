@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
 
-const FooterWrapper = styled.div`
-  padding: 2.5em 1em;
+import { MediaWidthContext } from "../ResumePortfolio";
+
+const FooterWrapper = styled.div<{ isLargeView: boolean }>`
+  padding: 2.5em 1em !important;
   text-align: center;
-  font-size: 0.7em;
+  font-size: ${(props) => (props.isLargeView ? "0.9em" : "0.7em")};
 `;
 
 export function Footer() {
+  const { isLargeView } = useContext(MediaWidthContext);
   return (
-    <FooterWrapper>
+    <FooterWrapper isLargeView={isLargeView}>
       Adrianne Sebastian v4.0.0
       <br />
       Updated 20231103 Site built using{" "}
