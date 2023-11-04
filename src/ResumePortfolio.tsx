@@ -2,12 +2,18 @@ import { createContext, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { About, Hero, Nav, Footer } from "./components";
+import { rgbThemeColors } from "./constants";
+import { ITheme } from "./interfaces";
+import { getRgbColor } from "./utils";
 
-const RootWrapper = styled.div`
+const RootWrapper = styled.div<{ theme: ITheme }>`
   * {
     margin: 0;
     padding: 0;
   }
+
+  color: rgb(${(props) => getRgbColor(props, "text")});
+  background-color: rgb(${(props) => getRgbColor(props, "bg")});
 
   display: flex;
   justify-content: center;
@@ -22,12 +28,18 @@ const ContentWrapper = styled.div`
 `;
 
 export const MediaWidthContext = createContext<any>(null);
+export const ThemeContext = createContext<any>(null);
 export const ActiveSectionContext = createContext<any>(null);
 
 export default function ResumePortfolio() {
   const [mediaWidth, setMediaWidth] = useState({
     isExtraLargeView: true,
     isLargeView: true,
+  });
+
+  const [theme, setTheme] = useState<ITheme>({
+    rgbThemeColors,
+    index: 0,
   });
 
   useEffect(() => {
@@ -46,14 +58,16 @@ export default function ResumePortfolio() {
 
   return (
     <MediaWidthContext.Provider value={mediaWidth}>
-      <RootWrapper>
-        <Nav />
-        <ContentWrapper>
-          <Hero />
-          <About />
-          <Footer />
-        </ContentWrapper>
-      </RootWrapper>
+      <ThemeContext.Provider value={[theme, setTheme]}>
+        <RootWrapper theme={theme}>
+          <Nav />
+          <ContentWrapper>
+            <Hero />
+            <About />
+            <Footer />
+          </ContentWrapper>
+        </RootWrapper>
+      </ThemeContext.Provider>
     </MediaWidthContext.Provider>
   );
 }

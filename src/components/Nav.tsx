@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { MediaWidthContext } from "../ResumePortfolio";
 
 const NavWrapper = styled.div<{ isExtraLargeView: boolean }>`
+  padding: 1.5em 2em !important;
   position: fixed;
   top: 0;
   display: flex;
@@ -11,9 +12,8 @@ const NavWrapper = styled.div<{ isExtraLargeView: boolean }>`
   align-content: center;
   justify-items: center;
   justify-content: space-between;
-  padding: 1.5em 2em;
-  background-color: #fff;
-  border-bottom: 1px dotted #ccc;
+  background-color: rgba(240, 220, 220, 0.9);
+  border-bottom: 1px dotted rgba(60, 55, 95, 0.5);
   width: ${(props) => (props.isExtraLargeView ? "1100px" : "100%")};
 `;
 
