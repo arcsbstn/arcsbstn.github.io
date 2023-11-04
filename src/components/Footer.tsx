@@ -16,13 +16,13 @@ const FooterWrapper = styled.div<{ isLargeView: boolean }>`
 const Link = styled.a<{ theme: ITheme }>`
   text-decoration: none;
   border-bottom: 1px dotted
-    rgba(${(props) => getRgbColor(props, "accent")}, 0.5);
+    rgba(${(props) => getRgbColor(props.theme, "accent")}, 0.5);
 
   &:link,
   &:hover,
   &:active,
   &:visited {
-    color: rgb(${(props) => getRgbColor(props, "accent")});
+    color: rgb(${(props) => getRgbColor(props.theme, "accent")});
   }
 `;
 

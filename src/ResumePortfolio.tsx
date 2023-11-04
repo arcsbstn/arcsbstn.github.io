@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { About, Hero, Nav, Footer } from "./components";
-import { rgbThemeColors } from "./constants";
 import { ITheme } from "./interfaces";
 import { getRgbColor } from "./utils";
 
@@ -12,8 +11,8 @@ const RootWrapper = styled.div<{ theme: ITheme }>`
     padding: 0;
   }
 
-  color: rgb(${(props) => getRgbColor(props, "text")});
-  background-color: rgb(${(props) => getRgbColor(props, "bg")});
+  color: rgb(${(props) => getRgbColor(props.theme, "text")});
+  background-color: rgb(${(props) => getRgbColor(props.theme, "bg")});
 
   display: flex;
   justify-content: center;
@@ -38,7 +37,6 @@ export default function ResumePortfolio() {
   });
 
   const [theme, setTheme] = useState<ITheme>({
-    rgbThemeColors,
     index: 0,
   });
 

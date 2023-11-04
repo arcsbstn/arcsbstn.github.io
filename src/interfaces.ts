@@ -5,6 +5,5 @@ export interface IRgbThemeColors {
 }
 
 export interface ITheme {
-  rgbThemeColors: IRgbThemeColors[];
   index: number;
 }
