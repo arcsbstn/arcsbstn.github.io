@@ -40,10 +40,15 @@ export function Nav() {
         <li>Projects</li>
         <li
           onClick={() => {
-            setTheme(({ index }: ITheme) => ({
-              ...rgbThemeColors,
-              index: index < rgbThemeColors.length - 1 ? index + 1 : 0,
-            }));
+            setTheme(({ index }: ITheme) => {
+              const newIndex =
+                index < rgbThemeColors.length - 1 ? index + 1 : 0;
+              localStorage.setItem("THEME_INDEX", `${newIndex}`);
+              return {
+                ...rgbThemeColors,
+                index: newIndex,
+              };
+            });
           }}
         >
           🔴

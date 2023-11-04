@@ -37,7 +37,7 @@ export default function ResumePortfolio() {
   });
 
   const [theme, setTheme] = useState<ITheme>({
-    index: 0,
+    index: parseInt(localStorage.getItem("THEME_INDEX") || "0", 10),
   });
 
   useEffect(() => {
