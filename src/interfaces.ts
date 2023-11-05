@@ -7,3 +7,7 @@ export interface IRgbThemeColors {
 export interface ITheme {
   index: number;
 }
+
+export interface ISvgProps {
+  color: string;
+}
