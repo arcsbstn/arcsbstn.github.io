@@ -1,18 +1,22 @@
 import { createContext, useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 import { About, Hero, Nav, Footer } from "./components";
 import { ITheme } from "./interfaces";
 import { getRgbColor } from "./utils";
 
-const RootWrapper = styled.div<{ theme: ITheme }>`
+const GlobalStyle = createGlobalStyle<{ theme: ITheme }>`
+  body {
+    color: rgb(${(props) => getRgbColor(props.theme, "text")});
+    background-color: rgb(${(props) => getRgbColor(props.theme, "bg")});
+  }
+`;
+
+const RootWrapper = styled.div`
   * {
     margin: 0;
     padding: 0;
   }
-
-  color: rgb(${(props) => getRgbColor(props.theme, "text")});
-  background-color: rgb(${(props) => getRgbColor(props.theme, "bg")});
 
   display: flex;
   justify-content: center;
@@ -57,7 +61,8 @@ export default function ResumePortfolio() {
   return (
     <MediaWidthContext.Provider value={mediaWidth}>
       <ThemeContext.Provider value={[theme, setTheme]}>
-        <RootWrapper theme={theme}>
+        <GlobalStyle theme={theme} />
+        <RootWrapper>
           <Nav />
           <ContentWrapper>
             <Hero />

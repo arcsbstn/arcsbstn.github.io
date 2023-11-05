@@ -39,6 +39,7 @@ export function Nav() {
         <li>Experience</li>
         <li>Projects</li>
         <li
+          style={{ cursor: "pointer" }}
           onClick={() => {
             setTheme(({ index }: ITheme) => {
               const newIndex =
