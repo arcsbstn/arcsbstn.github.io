@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
-import { About, Hero, Nav, Footer } from "./components";
+import { About, Hero, Nav, Footer, Experience } from "./components";
 import { ITheme } from "./interfaces";
 import { getRgbColor } from "./utils";
 
@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ITheme }>`
   body {
     color: rgb(${(props) => getRgbColor(props.theme, "text")});
     background-color: rgb(${(props) => getRgbColor(props.theme, "bg")});
+    letter-spacing: -0.03em;
   }
 `;
 
@@ -48,7 +49,7 @@ export default function ResumePortfolio() {
     function handleResize() {
       setMediaWidth({
         isExtraLargeView: window.innerWidth > 1250,
-        isLargeView: window.innerWidth > 790,
+        isLargeView: window.innerWidth > 870,
       });
     }
 
@@ -67,6 +68,7 @@ export default function ResumePortfolio() {
           <ContentWrapper>
             <Hero />
             <About />
+            <Experience />
             <Footer />
           </ContentWrapper>
         </RootWrapper>

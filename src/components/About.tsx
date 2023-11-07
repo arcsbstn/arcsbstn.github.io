@@ -26,7 +26,6 @@ const AboutContent = styled.div`
   #greeting {
     font-size: 1.5em;
     font-weight: bold;
-    letter-spacing: -0.05em;
     margin-bottom: 0.1em;
   }
 `;
