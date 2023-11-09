@@ -8,7 +8,6 @@ export const Table = styled.table`
 
 export const TableRow = styled.tr`
   vertical-align: top;
-  margin-bottom: 2em;
   border-spacing: 2em;
 `;
 
@@ -19,7 +18,7 @@ export const TableCell = styled.td`
 // Mobile View
 
 export const Row = styled.div`
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 `;
 
 // Common
@@ -33,19 +32,21 @@ export const ExperienceWrapper = styled.div`
 export const JobTitle = styled.p`
   font-weight: 800;
   min-width: 190px;
+  margin: 0;
 `;
 
-export const Organization = styled.h6``;
+export const Organization = styled.p`
+  font-size: 1em;
+  margin: 0;
+`;
 
 export const Duration = styled.p`
   text-transform: uppercase;
   font-size: 0.8em;
-  min-width: 170px;
-  padding-bottom: 0.7em;
+  min-width: 160px;
 `;
 
 export const ChipsWrapper = styled.div`
   display: flex;
   gap: 0.5em;
-  margin: 0.7em 0;
 `;
