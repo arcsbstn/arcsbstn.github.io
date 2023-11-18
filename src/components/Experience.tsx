@@ -11,6 +11,7 @@ import {
   JobTitle,
   Organization,
   Duration,
+  Description,
   ChipsWrapper,
 } from "./Experience.styles";
 import { OutgoingLink } from "./OutgoingLink";
@@ -38,7 +39,7 @@ export function Experience() {
                   <Organization>{organization}</Organization>
                 </TableCell>
                 <TableCell>
-                  <p>{description}</p>
+                  <Description>{description}</Description>
                   <ChipsWrapper>
                     {techStack.map((tech: string) => (
                       <Chip>{tech}</Chip>
@@ -57,7 +58,7 @@ export function Experience() {
                 <JobTitle>{role}</JobTitle>
                 <Organization>{organization}</Organization>
                 <Duration>{startEndDates}</Duration>
-                <p>{description}</p>
+                <Description>{description}</Description>
                 <ChipsWrapper>
                   {techStack.map((tech: string) => (
                     <Chip>{tech}</Chip>

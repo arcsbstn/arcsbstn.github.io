@@ -6,16 +6,20 @@ import { ITheme } from "./interfaces";
 import { getRgbColor } from "./utils";
 
 const GlobalStyle = createGlobalStyle<{ theme: ITheme }>`
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     color: rgb(${(props) => getRgbColor(props.theme, "text")});
     background-color: rgb(${(props) => getRgbColor(props.theme, "bg")});
     letter-spacing: -0.03em;
+    font-family: sans-serif;
   }
 `;
 
 const RootWrapper = styled.div`
-
-
   display: flex;
   justify-content: center;
   align-items: center;
