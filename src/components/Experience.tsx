@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { Chip } from "./common";
-import { experienceList } from "../constants";
+import { content, experienceList } from "../constants";
 import {
   ExperienceWrapper,
   Table,
@@ -32,12 +32,12 @@ export function Experience() {
   });
 
   useEffect(() => {
-    if (activeSection !== "experience" && experienceInView)
-      setActiveSection("experience");
+    if (activeSection !== content.EXPERIENCE && experienceInView)
+      setActiveSection(content.EXPERIENCE);
   }, [experienceInView]);
 
   return (
-    <ExperienceWrapper ref={experienceRef}>
+    <ExperienceWrapper ref={experienceRef} id={content.EXPERIENCE}>
       {isLargeView ? (
         <Table>
           {experienceList.map(

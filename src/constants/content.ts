@@ -1,4 +1,5 @@
 export const content = {
-  EXPERIENCE: "experience",
-  PROJECTS: "projects",
+  ABOUT: "About",
+  EXPERIENCE: "Experience",
+  PROJECTS: "Projects",
 };

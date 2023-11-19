@@ -1,13 +1,28 @@
 import { useContext } from "react";
 import styled from "styled-components";
 
-import { MediaWidthContext, ThemeContext } from "../ResumePortfolio";
 import { rgbThemeColors } from "../constants";
 import { ITheme } from "../interfaces";
+import {
+  ActiveSectionContext,
+  MediaWidthContext,
+  ThemeContext,
+} from "../ResumePortfolio";
 import { getRgbColor } from "../utils";
+import { content } from "../constants";
+
+interface IHandleClick {
+  e: React.MouseEvent<HTMLSpanElement>;
+  section: string;
+}
+
+interface INavLi {
+  activeSection: string;
+  currentSection: string;
+}
 
 const NavWrapper = styled.div<{ isExtraLargeView: boolean; theme: ITheme }>`
-  padding: 1.5em 2em !important;
+  padding: 1.5em 2em 0.1em 2em !important;
   position: fixed;
   top: 0;
   display: flex;
@@ -28,16 +43,43 @@ const NavUl = styled.ul`
   gap: 1em;
 `;
 
+const StyledSpan = styled.span<{ $isActiveSection?: boolean }>`
+  font-size: 0.8em;
+  cursor: pointer;
+  border-bottom: ${(props) => (props.$isActiveSection ? "1px dotted" : "none")};
+`;
+
+const NavLi = ({ activeSection, currentSection }: INavLi) => (
+  <li>
+    <StyledSpan
+      $isActiveSection={activeSection === currentSection}
+      onClick={(e: React.MouseEvent<HTMLSpanElement>) =>
+        handleClick({ e, section: currentSection })
+      }
+      children={currentSection.toUpperCase()}
+    />
+  </li>
+);
+
+function handleClick({ e, section }: IHandleClick) {
+  e.preventDefault();
+  window.location.replace(`/#${section}`);
+}
+
 export function Nav() {
   const { isExtraLargeView } = useContext(MediaWidthContext);
   const [theme, setTheme] = useContext(ThemeContext);
+  const [activeSection] = useContext(ActiveSectionContext);
+
   return (
     <NavWrapper isExtraLargeView={isExtraLargeView} theme={theme}>
       <div></div>
       <NavUl>
-        <li>About</li>
-        <li>Experience</li>
-        <li>Projects</li>
+        <NavLi activeSection={activeSection} currentSection={content.ABOUT} />
+        <NavLi
+          activeSection={activeSection}
+          currentSection={content.EXPERIENCE}
+        />
         <li
           style={{ cursor: "pointer" }}
           onClick={() => {

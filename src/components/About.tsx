@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
+import { content } from '../constants';
 import { ActiveSectionContext, MediaWidthContext } from "../ResumePortfolio";
 
 const AboutWrapper = styled.div`
@@ -40,11 +41,11 @@ export function About() {
   });
 
   useEffect(() => {
-    if (activeSection !== "about" && aboutInView) setActiveSection("about");
+    if (activeSection !== content.ABOUT && aboutInView) setActiveSection(content.ABOUT);
   }, [aboutInView]);
 
   return (
-    <AboutWrapper ref={aboutRef}>
+    <AboutWrapper ref={aboutRef} id={content.ABOUT}>
       <AboutContentWrapper isLargeView={isLargeView}>
         <AboutContent>
           <p id="greeting">Hello world!</p>
