@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import { Chip } from "./common";
 import { experienceList } from "../constants";
@@ -15,14 +16,28 @@ import {
   ChipsWrapper,
 } from "./Experience.styles";
 import { OutgoingLink } from "./OutgoingLink";
-import { MediaWidthContext, ThemeContext } from "../ResumePortfolio";
+import {
+  ActiveSectionContext,
+  MediaWidthContext,
+  ThemeContext,
+} from "../ResumePortfolio";
 
 export function Experience() {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
   const { isLargeView } = useContext(MediaWidthContext);
   const [theme] = useContext(ThemeContext);
 
+  const { ref: experienceRef, inView: experienceInView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (activeSection !== "experience" && experienceInView)
+      setActiveSection("experience");
+  }, [experienceInView]);
+
   return (
-    <ExperienceWrapper>
+    <ExperienceWrapper ref={experienceRef}>
       {isLargeView ? (
         <Table>
           {experienceList.map(

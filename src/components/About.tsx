@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
-import { MediaWidthContext } from "../ResumePortfolio";
+import { ActiveSectionContext, MediaWidthContext } from "../ResumePortfolio";
 
 const AboutWrapper = styled.div`
   min-height: 100vh;
@@ -31,9 +32,19 @@ const AboutContent = styled.div`
 `;
 
 export function About() {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
   const { isLargeView } = useContext(MediaWidthContext);
+
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (activeSection !== "about" && aboutInView) setActiveSection("about");
+  }, [aboutInView]);
+
   return (
-    <AboutWrapper>
+    <AboutWrapper ref={aboutRef}>
       <AboutContentWrapper isLargeView={isLargeView}>
         <AboutContent>
           <p id="greeting">Hello world!</p>

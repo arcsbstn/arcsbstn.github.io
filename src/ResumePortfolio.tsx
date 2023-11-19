@@ -37,6 +37,7 @@ export const ThemeContext = createContext<any>(null);
 export const ActiveSectionContext = createContext<any>(null);
 
 export default function ResumePortfolio() {
+  const [activeSection, setActiveSection] = useState("About");
   const [mediaWidth, setMediaWidth] = useState({
     isExtraLargeView: true,
     isLargeView: true,
@@ -63,16 +64,20 @@ export default function ResumePortfolio() {
   return (
     <MediaWidthContext.Provider value={mediaWidth}>
       <ThemeContext.Provider value={[theme, setTheme]}>
-        <GlobalStyle theme={theme} />
-        <RootWrapper>
-          <Nav />
-          <ContentWrapper>
-            <Hero />
-            <About />
-            <Experience />
-            <Footer />
-          </ContentWrapper>
-        </RootWrapper>
+        <ActiveSectionContext.Provider
+          value={[activeSection, setActiveSection]}
+        >
+          <GlobalStyle theme={theme} />
+          <RootWrapper>
+            <Nav />
+            <ContentWrapper>
+              <Hero />
+              <About />
+              <Experience />
+              <Footer />
+            </ContentWrapper>
+          </RootWrapper>
+        </ActiveSectionContext.Provider>
       </ThemeContext.Provider>
     </MediaWidthContext.Provider>
   );

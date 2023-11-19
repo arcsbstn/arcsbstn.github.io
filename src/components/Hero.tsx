@@ -1,8 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
 import { Profiles } from "./Profiles";
-import { MediaWidthContext, ThemeContext } from "../ResumePortfolio";
+import {
+  ActiveSectionContext,
+  MediaWidthContext,
+  ThemeContext,
+} from "../ResumePortfolio";
 import { ITheme } from "../interfaces";
 import { getRgbColor } from "../utils";
 
@@ -32,10 +37,20 @@ const Subtitle = styled.h2<{ isLargeView: boolean }>`
 `;
 
 export function Hero() {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
   const { isLargeView } = useContext(MediaWidthContext);
   const [theme] = useContext(ThemeContext);
+
+  const { ref: heroRef, inView: heroInView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (activeSection !== "hero" && heroInView) setActiveSection("hero");
+  }, [heroInView]);
+
   return (
-    <HeroWrapper>
+    <HeroWrapper ref={heroRef}>
       <div></div>
       <HeroContentWrapper>
         <Title isLargeView={isLargeView} theme={theme}>
