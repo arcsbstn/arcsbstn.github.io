@@ -1,34 +1,58 @@
 import { createContext, useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
-import { content } from "./constants";
-import { Sidebar, Content } from "./components";
+import { About, Hero, Nav, Footer, Experience } from "./components";
+import { ITheme } from "./interfaces";
+import { getRgbColor } from "./utils";
 
-const MainContainer = styled.div`
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  justify-content: center;
-  gap: 3.3em;
-  padding: 0 2em;
+const GlobalStyle = createGlobalStyle<{ theme: ITheme }>`
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-  flex-direction: row;
-
-  @media (max-width: 980px) {
-    flex-direction: column;
+  body {
+    color: rgb(${(props) => getRgbColor(props.theme, "text")});
+    background-color: rgb(${(props) => getRgbColor(props.theme, "bg")});
+    letter-spacing: -0.03em;
+    font-family: sans-serif;
   }
 `;
 
+const RootWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const ContentWrapper = styled.div`
+  padding: 0 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+`;
+
 export const MediaWidthContext = createContext<any>(null);
+export const ThemeContext = createContext<any>(null);
 export const ActiveSectionContext = createContext<any>(null);
 
 export default function ResumePortfolio() {
-  const [activeSection, setActiveSection] = useState(content.EXPERIENCE);
-  const [isWebView, setIsWebView] = useState(true);
+  const [activeSection, setActiveSection] = useState("About");
+  const [mediaWidth, setMediaWidth] = useState({
+    isExtraLargeView: true,
+    isLargeView: true,
+  });
+
+  const [theme, setTheme] = useState<ITheme>({
+    index: parseInt(localStorage.getItem("THEME_INDEX") || "0", 10),
+  });
 
   useEffect(() => {
     function handleResize() {
-      setIsWebView(window.innerWidth > 980);
+      setMediaWidth({
+        isExtraLargeView: window.innerWidth > 1250,
+        isLargeView: window.innerWidth > 870,
+      });
     }
 
     handleResize();
@@ -38,13 +62,23 @@ export default function ResumePortfolio() {
   }, []);
 
   return (
-    <MediaWidthContext.Provider value={isWebView}>
-      <ActiveSectionContext.Provider value={[activeSection, setActiveSection]}>
-        <MainContainer>
-          <Sidebar />
-          <Content />
-        </MainContainer>
-      </ActiveSectionContext.Provider>
+    <MediaWidthContext.Provider value={mediaWidth}>
+      <ThemeContext.Provider value={[theme, setTheme]}>
+        <ActiveSectionContext.Provider
+          value={[activeSection, setActiveSection]}
+        >
+          <GlobalStyle theme={theme} />
+          <RootWrapper>
+            <Nav />
+            <ContentWrapper>
+              <Hero />
+              <About />
+              <Experience />
+              <Footer />
+            </ContentWrapper>
+          </RootWrapper>
+        </ActiveSectionContext.Provider>
+      </ThemeContext.Provider>
     </MediaWidthContext.Provider>
   );
 }

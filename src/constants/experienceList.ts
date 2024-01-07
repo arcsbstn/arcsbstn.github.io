@@ -5,7 +5,7 @@ export const experienceList = [
     url: "https://www.fpsinc.com/",
     startEndDates: "2021 Oct - Present",
     description:
-      "Build features for Xcelerate, a contact center solution powered by the Twilio Flex platform. Key responsibilities include developing and maintaining UIs for Bulk Data Upload from CSV Files, Technical Support Documentation, Admin Configuration, and Multiple Outbound Numbers Configuration.",
+      "Build, customize, and maintain features for Xcelerate, a contact center solution powered by the Twilio Flex platform. Key features added include a more useable admin configuration page and admin capacity to assign multiple outbound numbers assignments to individual agents.",
     techStack: [
       "JavaScript",
       "Twilio",
@@ -30,7 +30,16 @@ export const experienceList = [
     url: "https://www.accenture.com/us-en",
     startEndDates: "2018 Feb - 2019 Apr",
     description:
-      "Temporarily assigned to the Virtual Chatbot team, where I resolved bugs and integrated the Elasticsearch and Kibana visualization engines with the chatbot.",
+      "Integrated the Elasticsearch and Kibana engines with the chatbot.",
     techStack: ["JavaScript", "Node.js", "AngularJS", "MongoDB"],
+  },
+  {
+    role: "Undergraduate Student Assistant",
+    organization: "Department of Science and Technology",
+    url: "https://www.youtube.com/watch?v=XEvzU7n4AP0",
+    startEndDates: "2015 Jun - 2017 Jun",
+    description:
+      "Assisted with gathering and processing data for the corpus.",
+    techStack: ["MATLAB", "Shell Scripting (Bash)"],
   },
 ];

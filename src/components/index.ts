@@ -1,2 +1,7 @@
-export { default as Content } from "./content/Content";
-export { default as Sidebar } from "./sidebar/Sidebar";
+export * from "./About";
+export * from "./Experience";
+export * from "./Footer";
+export * from "./Hero";
+export * from "./Nav";
+export * from "./Profiles";
+export * from "./Projects";

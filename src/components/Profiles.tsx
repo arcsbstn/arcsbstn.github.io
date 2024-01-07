@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import styled from "styled-components";
 
-import { CodePen, GitHub, LinkedIn } from "../../svg";
+import { ThemeContext } from "../ResumePortfolio";
+import { CodePen, GitHub, LinkedIn } from "../svg";
+import { getRgbColor } from "../utils";
 
 const ProfilesWrapper = styled.ul`
   padding: 0;
@@ -10,17 +13,18 @@ const ProfilesWrapper = styled.ul`
   gap: 1em;
 `;
 
-export default function Profiles() {
+export function Profiles() {
+  const [theme] = useContext(ThemeContext);
   return (
     <ProfilesWrapper>
       <li>
         <a href="https://github.com/arcsbstn" target="_blank" rel="noreferrer">
-          <GitHub />
+          <GitHub color={`rgb(${getRgbColor(theme, "text")})`} />
         </a>
       </li>
       <li>
         <a href="https://codepen.io/arcsbstn" target="_blank" rel="noreferrer">
-          <CodePen />
+          <CodePen color={`rgb(${getRgbColor(theme, "text")})`}/>
         </a>
       </li>
       <li>
@@ -29,7 +33,7 @@ export default function Profiles() {
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedIn />
+          <LinkedIn color={`rgb(${getRgbColor(theme, "text")})`}/>
         </a>
       </li>
     </ProfilesWrapper>
